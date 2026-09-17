@@ -7,32 +7,51 @@ document.addEventListener("DOMContentLoaded", () => {
   initDropdown();
   initConstructionModal();
   initDirectoryReveal();
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-/* ---------- Mobile menu toggle ---------- */
+/* ---------- Mobile slide-in menu ---------- */
 function initMobileMenu() {
   const toggle = document.getElementById("menuToggle");
+  const closeBtn = document.getElementById("navClose");
   const nav = document.getElementById("mainNav");
-  if (!toggle || !nav) return;
+  const scrim = document.getElementById("navScrim");
+  if (!toggle || !nav || !scrim) return;
 
-  toggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
+  const openNav = () => {
+    nav.classList.add("is-open");
+    scrim.classList.add("is-visible");
+    toggle.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeNav = () => {
+    nav.classList.remove("is-open");
+    scrim.classList.remove("is-visible");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  };
+
+  toggle.addEventListener("click", openNav);
+  if (closeBtn) closeBtn.addEventListener("click", closeNav);
+  scrim.addEventListener("click", closeNav);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNav();
   });
 
-  // Close mobile menu when a plain link is clicked
+  // Close the mobile panel when a plain (non-dropdown, non-construction) link is clicked
   nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      if (!link.hasAttribute("data-construction")) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
+    link.addEventListener("click", () => {
+      if (!link.hasAttribute("data-construction") && !link.classList.contains("dropdown-toggle")) {
+        closeNav();
       }
     });
   });
 }
 
-/* ---------- Departments dropdown (desktop + mobile) ---------- */
+/* ---------- Departments dropdown (desktop popover + mobile accordion) ---------- */
 function initDropdown() {
   const wrapper = document.querySelector(".has-dropdown");
   const toggleBtn = document.getElementById("deptToggle");

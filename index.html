@@ -17,30 +17,82 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
+
     <a href="index.html" class="logo" aria-label="SAVCLICK home">
-      <span class="logo-mark">SC</span>
+      <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="40" height="40">
       <span class="logo-word">SAVCLICK</span>
     </a>
 
     <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <div class="main-nav-head">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="34" height="34">
+          <span class="logo-word">SAVCLICK</span>
+        </a>
+        <button class="nav-close" id="navClose" aria-label="Close menu">×</button>
+      </div>
+
       <ul>
         <li><a href="index.html" class="nav-link active">Home</a></li>
+
         <li class="has-dropdown">
           <button class="nav-link dropdown-toggle" id="deptToggle" aria-expanded="false" aria-controls="deptMenu">
             Departments
-            <svg class="chev" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="chev" aria-hidden="true"></span>
           </button>
-          <ul class="dropdown-menu" id="deptMenu">
-            <li><a href="savclick-tech.html">SAVCLICK Tech <span class="tag tag-open">Open</span></a></li>
-            <li><a href="savclick-digitex.html">SAVCLICK Digitex <span class="tag tag-open">Open</span></a></li>
-            <li><a href="savclick-academy.html">SAVCLICK Academy <span class="tag tag-open">Open</span></a></li>
-            <li><a href="#" data-construction="Travels">SAVCLICK Travels <span class="tag tag-soon">Coming soon</span></a></li>
-            <li><a href="#" data-construction="Properties">SAVCLICK Properties <span class="tag tag-soon">Coming soon</span></a></li>
-          </ul>
+
+          <div class="dropdown-menu" id="deptMenu">
+            <p class="dropdown-title">Choose a department</p>
+
+            <a class="dropdown-item" href="savclick-tech.html">
+              <img src="images/dept-tech.png" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Tech<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Logic board repair, Apple laptops, smart home automation</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-digitex.html">
+              <img src="images/dept-digitex.png" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Digitex<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Digital services and information hub</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-academy.html">
+              <img src="images/dept-academy.png" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Academy<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Training programs and reservations</span>
+              </span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Travels">
+              <img src="images/dept-travels.png" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Travels<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Properties">
+              <img src="images/dept-properties.png" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Properties<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+          </div>
         </li>
+
         <li><a href="about.html" class="nav-link">About Us</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
+
+      <a href="contact.html" class="btn btn-primary btn-nav-mobile">Talk to us</a>
     </nav>
 
     <a href="contact.html" class="btn btn-primary btn-nav">Talk to us</a>
@@ -51,26 +103,25 @@
   </div>
 </header>
 
+<div class="nav-scrim" id="navScrim"></div>
+
 <main id="main">
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="container hero-inner">
-      <p class="eyebrow">A Nigerian holding company</p>
-      <h1>One building.<br>Five businesses.<br>Every floor open for work.</h1>
-      <p class="hero-sub">SAVCLICK brings together technology, digital services, training, travel and property under one name. Each department runs as its own business — its own team, its own focus, its own address — inside the same house.</p>
-      <div class="hero-actions">
-        <a href="#directory" class="btn btn-primary">Visit a department</a>
-        <a href="about.html" class="btn btn-ghost">About SAVCLICK</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">A Nigerian holding company</p>
+        <h1>One building.<br>Five businesses.<br>Every floor open for work.</h1>
+        <p class="hero-sub">SAVCLICK brings together technology, digital services, training, travel and property under one name. Each department runs as its own business — its own team, its own focus, its own address — inside the same house.</p>
+        <div class="hero-actions">
+          <a href="#directory" class="btn btn-primary">Visit a department</a>
+          <a href="about.html" class="btn btn-ghost">About SAVCLICK</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-figure" aria-hidden="true">
-      <div class="building">
-        <div class="building-window w-active" style="--d:0"></div>
-        <div class="building-window w-active" style="--d:1"></div>
-        <div class="building-window w-active" style="--d:2"></div>
-        <div class="building-window w-dim" style="--d:3"></div>
-        <div class="building-window w-dim" style="--d:4"></div>
+
+      <div class="hero-media">
+        <img src="images/hero-banner.jpg" alt="SAVCLICK banner — add brand photography or building visual here" class="hero-banner-img">
       </div>
     </div>
   </section>
@@ -103,38 +154,93 @@
       <div class="board" id="board">
 
         <a class="board-row" href="savclick-tech.html">
+          <img src="images/dept-tech.png" alt="" class="board-icon">
           <span class="suite">Suite 01</span>
-          <span class="board-name">SAVCLICK Tech</span>
-          <span class="board-desc">Logic board repair, Apple laptop sales, spare parts, smart home automation</span>
+          <span class="board-text">
+            <span class="board-name">SAVCLICK Tech</span>
+            <span class="board-desc">Logic board repair, Apple laptop sales, spare parts, smart home automation</span>
+          </span>
           <span class="tag tag-open">Open</span>
         </a>
 
         <a class="board-row" href="savclick-digitex.html">
+          <img src="images/dept-digitex.png" alt="" class="board-icon">
           <span class="suite">Suite 02</span>
-          <span class="board-name">SAVCLICK Digitex</span>
-          <span class="board-desc">Digital services and information, formerly the main SAVCLICK site</span>
+          <span class="board-text">
+            <span class="board-name">SAVCLICK Digitex</span>
+            <span class="board-desc">Digital services and information, formerly the main SAVCLICK site</span>
+          </span>
           <span class="tag tag-open">Open</span>
         </a>
 
         <a class="board-row" href="savclick-academy.html">
+          <img src="images/dept-academy.png" alt="" class="board-icon">
           <span class="suite">Suite 03</span>
-          <span class="board-name">SAVCLICK Academy</span>
-          <span class="board-desc">Training programs, upcoming courses, private training reservations</span>
+          <span class="board-text">
+            <span class="board-name">SAVCLICK Academy</span>
+            <span class="board-desc">Training programs, upcoming courses, private training reservations</span>
+          </span>
           <span class="tag tag-open">Open</span>
         </a>
 
         <a class="board-row is-locked" href="#" data-construction="Travels">
+          <img src="images/dept-travels.png" alt="" class="board-icon">
           <span class="suite">Suite 04</span>
-          <span class="board-name">SAVCLICK Travels</span>
-          <span class="board-desc">Travel and logistics — opening after launch</span>
+          <span class="board-text">
+            <span class="board-name">SAVCLICK Travels</span>
+            <span class="board-desc">Travel and logistics — opening after launch</span>
+          </span>
           <span class="tag tag-soon">Coming soon</span>
         </a>
 
         <a class="board-row is-locked" href="#" data-construction="Properties">
+          <img src="images/dept-properties.png" alt="" class="board-icon">
           <span class="suite">Suite 05</span>
-          <span class="board-name">SAVCLICK Properties</span>
-          <span class="board-desc">Property and real estate — opening after launch</span>
+          <span class="board-text">
+            <span class="board-name">SAVCLICK Properties</span>
+            <span class="board-desc">Property and real estate — opening after launch</span>
+          </span>
           <span class="tag tag-soon">Coming soon</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORE THE SITE (teasers for the other pages) ============ -->
+  <section class="explore">
+    <div class="container">
+      <p class="eyebrow">Around the site</p>
+      <h2>Everything else on savclick.com</h2>
+      <p class="section-sub">Home is just the entrance. Here's what's waiting on the other pages.</p>
+
+      <div class="explore-grid">
+
+        <a class="explore-card" href="index.html#directory">
+          <img src="images/page-departments.jpg" alt="SAVCLICK Departments page preview" class="explore-img">
+          <div class="explore-body">
+            <h3>Departments</h3>
+            <p>The full directory board — open Tech, Digitex and Academy, or check what's coming next with Travels and Properties.</p>
+            <span class="explore-link">View departments</span>
+          </div>
+        </a>
+
+        <a class="explore-card" href="about.html">
+          <img src="images/page-about.jpg" alt="SAVCLICK About Us page preview" class="explore-img">
+          <div class="explore-body">
+            <h3>About Us</h3>
+            <p>Who SAVCLICK is, how the holding company is structured, and the standard every department is built to.</p>
+            <span class="explore-link">Read our story</span>
+          </div>
+        </a>
+
+        <a class="explore-card" href="contact.html">
+          <img src="images/page-contact.jpg" alt="SAVCLICK Contact page preview" class="explore-img">
+          <div class="explore-body">
+            <h3>Contact</h3>
+            <p>Not sure which department fits your request? Send us a message and we'll point you to the right floor.</p>
+            <span class="explore-link">Get in touch</span>
+          </div>
         </a>
 
       </div>
@@ -181,7 +287,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo">
-        <span class="logo-mark">SC</span>
+        <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="34" height="34">
         <span class="logo-word">SAVCLICK</span>
       </a>
       <p>One holding company, five independent businesses, one address.</p>
