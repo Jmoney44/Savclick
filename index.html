@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAVCLICK — One Address, Five Businesses</title>
+<meta name="description" content="SAVCLICK is a Nigerian holding company operating five businesses under one roof: Tech, Digitex, Academy, Travels and Properties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="SAVCLICK home">
+      <span class="logo-mark">SC</span>
+      <span class="logo-word">SAVCLICK</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="has-dropdown">
+          <button class="nav-link dropdown-toggle" id="deptToggle" aria-expanded="false" aria-controls="deptMenu">
+            Departments
+            <svg class="chev" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="dropdown-menu" id="deptMenu">
+            <li><a href="savclick-tech.html">SAVCLICK Tech <span class="tag tag-open">Open</span></a></li>
+            <li><a href="savclick-digitex.html">SAVCLICK Digitex <span class="tag tag-open">Open</span></a></li>
+            <li><a href="savclick-academy.html">SAVCLICK Academy <span class="tag tag-open">Open</span></a></li>
+            <li><a href="#" data-construction="Travels">SAVCLICK Travels <span class="tag tag-soon">Coming soon</span></a></li>
+            <li><a href="#" data-construction="Properties">SAVCLICK Properties <span class="tag tag-soon">Coming soon</span></a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="btn btn-primary btn-nav">Talk to us</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">A Nigerian holding company</p>
+      <h1>One building.<br>Five businesses.<br>Every floor open for work.</h1>
+      <p class="hero-sub">SAVCLICK brings together technology, digital services, training, travel and property under one name. Each department runs as its own business — its own team, its own focus, its own address — inside the same house.</p>
+      <div class="hero-actions">
+        <a href="#directory" class="btn btn-primary">Visit a department</a>
+        <a href="about.html" class="btn btn-ghost">About SAVCLICK</a>
+      </div>
+    </div>
+    <div class="hero-figure" aria-hidden="true">
+      <div class="building">
+        <div class="building-window w-active" style="--d:0"></div>
+        <div class="building-window w-active" style="--d:1"></div>
+        <div class="building-window w-active" style="--d:2"></div>
+        <div class="building-window w-dim" style="--d:3"></div>
+        <div class="building-window w-dim" style="--d:4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO STRIP ============ -->
+  <section class="intro-strip">
+    <div class="container intro-grid">
+      <div class="intro-stat">
+        <span class="stat-num">5</span>
+        <span class="stat-label">departments under one name</span>
+      </div>
+      <div class="intro-stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">open for business right now</span>
+      </div>
+      <div class="intro-stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">address to find them all</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIRECTORY BOARD ============ -->
+  <section class="directory" id="directory">
+    <div class="container">
+      <p class="eyebrow">Find a department</p>
+      <h2>The SAVCLICK directory board</h2>
+      <p class="section-sub">Think of SAVCLICK as a building. Every department is a flat inside it — walk up, pick a floor, and you're in a fully separate business built for that job.</p>
+
+      <div class="board" id="board">
+
+        <a class="board-row" href="savclick-tech.html">
+          <span class="suite">Suite 01</span>
+          <span class="board-name">SAVCLICK Tech</span>
+          <span class="board-desc">Logic board repair, Apple laptop sales, spare parts, smart home automation</span>
+          <span class="tag tag-open">Open</span>
+        </a>
+
+        <a class="board-row" href="savclick-digitex.html">
+          <span class="suite">Suite 02</span>
+          <span class="board-name">SAVCLICK Digitex</span>
+          <span class="board-desc">Digital services and information, formerly the main SAVCLICK site</span>
+          <span class="tag tag-open">Open</span>
+        </a>
+
+        <a class="board-row" href="savclick-academy.html">
+          <span class="suite">Suite 03</span>
+          <span class="board-name">SAVCLICK Academy</span>
+          <span class="board-desc">Training programs, upcoming courses, private training reservations</span>
+          <span class="tag tag-open">Open</span>
+        </a>
+
+        <a class="board-row is-locked" href="#" data-construction="Travels">
+          <span class="suite">Suite 04</span>
+          <span class="board-name">SAVCLICK Travels</span>
+          <span class="board-desc">Travel and logistics — opening after launch</span>
+          <span class="tag tag-soon">Coming soon</span>
+        </a>
+
+        <a class="board-row is-locked" href="#" data-construction="Properties">
+          <span class="suite">Suite 05</span>
+          <span class="board-name">SAVCLICK Properties</span>
+          <span class="board-desc">Property and real estate — opening after launch</span>
+          <span class="tag tag-soon">Coming soon</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT MAKES IT WORK ============ -->
+  <section class="principles">
+    <div class="container">
+      <p class="eyebrow">Why one holding company</p>
+      <h2>Separate businesses. Shared standard.</h2>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <h3>Its own identity</h3>
+          <p>Every department gets its own logo, its own site, and its own tone — built around what that department actually does, not a copy-pasted template.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Its own front door</h3>
+          <p>Home, services, shop, careers, about and contact — each department is a complete, independent website, not a page buried inside another one.</p>
+        </div>
+        <div class="principle-card">
+          <h3>One name behind it</h3>
+          <p>Whichever door you walk through, you're dealing with SAVCLICK — the same standard of work, the same accountability, the same name.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Not sure which department you need?</h2>
+        <p>Tell us what you're trying to get done and we'll point you to the right floor.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Contact SAVCLICK</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">SC</span>
+        <span class="logo-word">SAVCLICK</span>
+      </a>
+      <p>One holding company, five independent businesses, one address.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Departments</h4>
+      <ul>
+        <li><a href="savclick-tech.html">SAVCLICK Tech</a></li>
+        <li><a href="savclick-digitex.html">SAVCLICK Digitex</a></li>
+        <li><a href="savclick-academy.html">SAVCLICK Academy</a></li>
+        <li><a href="#" data-construction="Travels">SAVCLICK Travels</a></li>
+        <li><a href="#" data-construction="Properties">SAVCLICK Properties</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="mailto:hello@savclick.com">hello@savclick.com</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SAVCLICK Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ CONSTRUCTION MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <span class="modal-icon">🚧</span>
+    <h3 id="modalTitle">SAVCLICK <span id="modalDept"></span> is under construction</h3>
+    <p>This department hasn't opened yet. We're building it as our next project after launch — check back soon.</p>
+    <button class="btn btn-primary" id="modalOk">Got it</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
