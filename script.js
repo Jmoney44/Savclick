@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDropdown();
   initConstructionModal();
   initDirectoryReveal();
+  initContactForm();
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
@@ -131,4 +132,66 @@ function initDirectoryReveal() {
   );
 
   observer.observe(board);
+}
+
+/* ---------- Contact form: validation + demo submit ---------- */
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+  const successPanel = document.getElementById("formSuccess");
+  const resetBtn = document.getElementById("formReset");
+  if (!form) return;
+
+  const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+  const setFieldState = (fieldEl, valid) => {
+    const wrapper = fieldEl.closest(".field");
+    if (!wrapper) return;
+    wrapper.classList.toggle("has-error", !valid);
+  };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let allValid = true;
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const department = document.getElementById("department");
+    const message = document.getElementById("message");
+
+    const nameValid = fullName.value.trim().length > 1;
+    setFieldState(fullName, nameValid);
+    if (!nameValid) allValid = false;
+
+    const emailValid = isValidEmail(email.value.trim());
+    setFieldState(email, emailValid);
+    if (!emailValid) allValid = false;
+
+    const deptValid = department.value !== "";
+    setFieldState(department, deptValid);
+    if (!deptValid) allValid = false;
+
+    const messageValid = message.value.trim().length > 4;
+    setFieldState(message, messageValid);
+    if (!messageValid) allValid = false;
+
+    if (!allValid) {
+      const firstError = form.querySelector(".has-error input, .has-error select, .has-error textarea");
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    // No backend connected yet — this is a front-end only demo.
+    form.hidden = true;
+    if (successPanel) successPanel.hidden = false;
+  });
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      form.reset();
+      form.querySelectorAll(".field.has-error").forEach((f) => f.classList.remove("has-error"));
+      form.hidden = false;
+      if (successPanel) successPanel.hidden = true;
+    });
+  }
 }
