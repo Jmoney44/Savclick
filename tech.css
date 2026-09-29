@@ -29,6 +29,18 @@
 .t-card h3 { font-size: 1.05rem; }
 .t-card p { color: var(--navy-70); font-size: 0.93rem; margin-bottom: 0; }
 
+/* Card with a photo — used for Hardware repair */
+.t-card-photo { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.t-card-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--navy-06); }
+.t-card-photo .t-card-body { padding: 18px 20px 20px; }
+.t-card-photo h3 { font-size: 1.02rem; }
+.t-card-photo p { color: var(--navy-70); font-size: 0.92rem; margin-bottom: 0; }
+@media (min-width: 480px) {
+  .t-card-photo.t-card-side { flex-direction: row; align-items: stretch; }
+  .t-card-photo.t-card-side img { width: 40%; aspect-ratio: auto; flex-shrink: 0; }
+  .t-card-photo.t-card-side .t-card-body { padding: 18px; }
+}
+
 /* Offer cards: the four main services, given more weight */
 .offer-card { border-top: 3px solid var(--savclick-azure-action); border-radius: var(--radius-sm) var(--radius-sm) var(--radius-md) var(--radius-md); }
 
@@ -61,13 +73,46 @@
 .gallery-list { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
 .gallery-list li { font-size: 0.85rem; padding: 6px 14px; border: 1px solid var(--border-hairline); border-radius: 999px; color: var(--navy-70); background: var(--white); }
 
-/* Repair steps (a true sequence, so numbered) */
-.steps { display: grid; grid-template-columns: 1fr; gap: 18px; counter-reset: step; list-style: none; margin: 0; padding: 0; }
-@media (min-width: 760px) { .steps { grid-template-columns: repeat(4, 1fr); } }
-.step { position: relative; padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--white); counter-increment: step; }
-.step::before { content: counter(step); display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-bottom: 14px; border-radius: 50%; background: var(--savclick-azure-action); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; }
-.step h3 { font-size: 1.02rem; }
-.step p { color: var(--navy-70); font-size: 0.92rem; margin-bottom: 0; }
+/* Repair process: connected circles, no card copy */
+.process { display: flex; flex-direction: column; align-items: center; gap: 40px; list-style: none; margin: 0; padding: 0; }
+.process-step { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.process-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background: var(--border-hairline);
+}
+.process-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--savclick-azure-action);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+}
+.process-step p { margin: 12px 0 0; font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; }
+
+@media (min-width: 760px) {
+  .process { flex-direction: row; align-items: flex-start; justify-content: center; gap: 0; }
+  .process-step { flex: 1 1 0; max-width: 200px; }
+  .process-step:not(:last-child)::after {
+    top: 34px;
+    left: calc(50% + 34px);
+    transform: none;
+    width: calc(100% - 68px);
+    height: 2px;
+  }
+}
 
 /* Link cards: training, shop, about */
 .link-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
