@@ -2,14 +2,86 @@
    SAVCLICK Tech — department page (load after style.css)
    ========================================================= */
 
-.tech-hero { padding: 56px 0 64px; }
-.tech-hero .hero-actions { margin-top: 14px; }
-.hero-note { margin: 18px 0 0; font-size: 0.86rem; color: var(--navy-70); }
+.tech-hero { padding: 40px 0 48px; }
 
-.tech-suites { border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); background: var(--white); }
-.tech-suites ul { display: flex; flex-wrap: wrap; gap: 10px 28px; padding: 20px 0; }
-.tech-suites li { font-size: 0.92rem; color: var(--navy-70); font-weight: 500; }
-.tech-suites li::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 10px; border-radius: 50%; background: var(--savclick-mint-value); }
+/* ---------- Hero grid: one set of elements, remapped per breakpoint ----------
+   Mobile order (default, matches DOM / reading order):
+   crumb -> eyebrow -> title -> lead -> media -> suites -> note -> actions
+   Desktop order: two columns (text stack / media), suites as a full-width
+   row underneath both columns.
+------------------------------------------------------------------------- */
+.tech-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "crumb"
+    "eyebrow"
+    "title"
+    "lead"
+    "media"
+    "suites"
+    "note"
+    "actions";
+}
+
+.area-crumb   { grid-area: crumb; }
+.area-eyebrow { grid-area: eyebrow; margin-bottom: 0; }
+.area-title   { grid-area: title; }
+.area-lead    { grid-area: lead; }
+.area-media   { grid-area: media; }
+.area-suites  { grid-area: suites; }
+.area-note    { grid-area: note; margin: 0; }
+.area-actions { grid-area: actions; margin: 0; }
+
+.area-media .page-hero-img { width: 100%; height: auto; }
+
+@media (min-width: 960px) {
+  .tech-hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    column-gap: 56px;
+    row-gap: 14px;
+    grid-template-areas:
+      "crumb   media"
+      "eyebrow media"
+      "title   media"
+      "lead    media"
+      "actions media"
+      "note    media"
+      "suites  suites";
+  }
+  .area-media { align-self: start; }
+  .area-lead, .area-eyebrow, .area-crumb, .area-title { max-width: 560px; }
+}
+
+/* ---------- Suites bullet row (now part of the hero grid) ---------- */
+.tech-suites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+.tech-suites-list li {
+  display: flex;
+  align-items: center;
+  font-size: 0.92rem;
+  color: var(--navy-70);
+  font-weight: 500;
+}
+.tech-suites-list li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--savclick-mint-value);
+  flex-shrink: 0;
+}
+
+.hero-note { font-size: 0.86rem; color: var(--navy-70); }
 
 .t-section { padding: 72px 0; }
 .t-section.alt { background: var(--white); }
