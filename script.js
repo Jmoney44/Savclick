@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDirectoryReveal();
   initContactForm();
   initPortfolioFilter();
+  initReservationForm();
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
@@ -224,4 +225,73 @@ function initPortfolioFilter() {
   document.querySelectorAll("[data-pf-jump]").forEach((link) => {
     link.addEventListener("click", () => apply(link.dataset.pfJump));
   });
+}
+
+/* ---------- Training reservation form (SAVCLICK Academy) ----------
+   No backend: on submit it opens the visitor's email app with a prefilled
+   message. Change RESERVE_EMAIL to route requests elsewhere. */
+function initReservationForm() {
+  const form = document.getElementById("reserveForm");
+  if (!form) return;
+  const RESERVE_EMAIL = "hello@savclick.com";
+  const success = document.getElementById("reserveSuccess");
+  const resetBtn = document.getElementById("reserveReset");
+  const course = document.getElementById("rCourse");
+
+  // "Reserve" links elsewhere on the page preselect their course
+  document.querySelectorAll("[data-course]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const match = [...course.options].find((o) => o.value === link.dataset.course);
+      if (match) course.value = match.value;
+    });
+  });
+
+  const field = (id) => document.getElementById(id);
+  const mark = (el, ok) => el.closest(".field").classList.toggle("has-error", !ok);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = field("rName"), phone = field("rPhone"), email = field("rEmail");
+    const format = field("rFormat"), start = field("rStart"), message = field("rMessage");
+
+    const checks = [
+      [name, name.value.trim().length > 1],
+      [phone, phone.value.replace(/\D/g, "").length >= 7],
+      [email, email.value.trim() === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())],
+      [course, course.value !== ""],
+      [format, format.value !== ""],
+    ];
+    checks.forEach(([el, ok]) => mark(el, ok));
+    const firstBad = checks.find(([, ok]) => !ok);
+    if (firstBad) { firstBad[0].focus(); return; }
+
+    const body = [
+      "Hello SAVCLICK Academy, I'd like to reserve a training.",
+      "",
+      "Name: " + name.value.trim(),
+      "Phone / WhatsApp: " + phone.value.trim(),
+      "Email: " + (email.value.trim() || "-"),
+      "Course: " + course.value,
+      "Format: " + format.value,
+      "Preferred start date: " + (start.value || "Flexible"),
+      "",
+      message.value.trim(),
+    ].join("\n");
+
+    window.location.href = "mailto:" + RESERVE_EMAIL +
+      "?subject=" + encodeURIComponent("Training reservation: " + course.value) +
+      "&body=" + encodeURIComponent(body);
+
+    form.hidden = true;
+    if (success) success.hidden = false;
+  });
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      form.reset();
+      form.querySelectorAll(".field.has-error").forEach((f) => f.classList.remove("has-error"));
+      form.hidden = false;
+      success.hidden = true;
+    });
+  }
 }

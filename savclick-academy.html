@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAVCLICK Academy — Repair, Web, Design and Digital Skills Training</title>
+<meta name="description" content="SAVCLICK Academy: hands-on training in MacBook repair, smart home automation, web development, graphic design, video and digital marketing. Group, private and team courses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tech.css">
+<link rel="stylesheet" href="academy.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+
+    <a href="index.html" class="logo" aria-label="SAVCLICK home">
+      <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="40" height="40">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <div class="main-nav-head">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="34" height="34">
+        </a>
+        <button class="nav-close" id="navClose" aria-label="Close menu">×</button>
+      </div>
+
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+
+        <li class="has-dropdown">
+          <button class="nav-link dropdown-toggle active" id="deptToggle" aria-expanded="false" aria-controls="deptMenu">
+            Departments
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+
+          <div class="dropdown-menu" id="deptMenu">
+            <p class="dropdown-title">Choose a department</p>
+
+            <a class="dropdown-item" href="savclick-tech.html">
+              <img src="images/savclickTech.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Tech<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Logic board repair, Apple laptops, smart home automation</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-digitex.html">
+              <img src="images/savclickdigitex.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Digitex<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Digital services and information hub</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-academy.html" aria-current="page">
+              <img src="images/savclickacademy.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Academy<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Training programs and reservations</span>
+              </span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Travels">
+              <img src="images/savclicktravels.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Travels<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Properties">
+              <img src="images/savclickproperties.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Properties<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary btn-nav-mobile">Talk to us</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn-primary btn-nav">Talk to us</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="tech-hero">
+    <div class="container tech-hero-grid">
+
+      <nav class="breadcrumb area-crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="index.html#directory">Departments</a><span>/</span>SAVCLICK Academy
+      </nav>
+
+      <p class="eyebrow area-eyebrow">Suite 03 · Training and courses</p>
+
+      <h1 class="area-title">Learn a skill you can earn from.</h1>
+
+      <p class="hero-sub area-lead">Hands-on training in MacBook repair, web development, graphic design, video, digital marketing and smart home automation, taught by the same people who do this work every day at SAVCLICK Tech and Digitex.</p>
+
+      <div class="area-media">
+        <img src="images/savclickacademy.jpeg" alt="SAVCLICK Academy: training programs and courses" class="page-hero-img">
+      </div>
+
+      <ul class="tech-suites-list area-suites" aria-label="Everything under SAVCLICK Academy">
+        <li>Training programs</li>
+        <li>Upcoming courses</li>
+        <li>Private training reservations</li>
+      </ul>
+
+      <p class="hero-note area-note">Not sure which course fits you? Ask us and we'll help you choose.</p>
+
+      <div class="hero-actions area-actions">
+        <a href="#reserve" class="btn btn-primary">Reserve a training</a>
+        <a href="#programs" class="btn btn-ghost">See the programs</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="t-section" id="programs">
+    <div class="container">
+      <div class="t-head">
+        <h2>Training programs</h2>
+        <p>Practical courses built from the work our departments do for real clients. You learn by doing, not just by watching.</p>
+      </div>
+      <div class="t-grid cols-3">
+
+        <article class="t-card offer-card ac-program">
+          <span class="ac-tag">From SAVCLICK Tech</span>
+          <h3>MacBook and logic board repair</h3>
+          <p>Diagnose and repair Apple laptops, from screens, batteries and keyboards to board-level faults and chip-level work.</p>
+          <ul class="ac-points">
+            <li>Fault diagnosis</li>
+            <li>Hardware replacement</li>
+            <li>Soldering and rework</li>
+            <li>macOS installation</li>
+          </ul>
+          <a href="#reserve" class="pf-jump" data-course="MacBook and logic board repair">Reserve this course →</a>
+        </article>
+
+        <article class="t-card offer-card ac-program">
+          <span class="ac-tag">From SAVCLICK Tech</span>
+          <h3>Smart home automation</h3>
+          <p>Plan, install and configure smart lighting, security and connected devices for homes and offices.</p>
+          <ul class="ac-points">
+            <li>System planning</li>
+            <li>Device installation</li>
+            <li>Network setup</li>
+            <li>App configuration</li>
+          </ul>
+          <a href="#reserve" class="pf-jump" data-course="Smart home automation">Reserve this course →</a>
+        </article>
+
+        <article class="t-card offer-card ac-program">
+          <span class="ac-tag">From SAVCLICK Digitex</span>
+          <h3>Web development</h3>
+          <p>Build websites that work on every phone, from your first HTML page to a site you can hand to a client.</p>
+          <ul class="ac-points">
+            <li>HTML and CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive design</li>
+            <li>Publishing a site</li>
+          </ul>
+          <a href="#reserve" class="pf-jump" data-course="Web development">Reserve this course →</a>
+        </article>
+
+        <article class="t-card offer-card ac-program">
+          <span class="ac-tag">From SAVCLICK Digitex</span>
+          <h3>Graphic design</h3>
+          <p>Design logos, flyers and social media graphics that look professional, using industry-standard tools.</p>
+          <ul class="ac-points">
+            <li>Design principles</li>
+            <li>Logo and brand identity</li>
+            <li>Social media graphics</li>
+            <li>Print-ready files</li>
+          </ul>
+          <a href="#reserve" class="pf-jump" data-course="Graphic design">Reserve this course →</a>
+        </article>
+
+        <article class="t-card offer-card ac-program">
+          <span class="ac-tag">From SAVCLICK Digitex</span>
+          <h3>Video editing and animation</h3>
+          <p>Edit footage, add motion graphics and create short animated adverts ready for social media.</p>
+          <ul class="ac-points">
+            <li>Editing workflow</li>
+            <li>Motion graphics</li>
+            <li>Advert animation</li>
+            <li>Exporting for social</li>
+          </ul>
+          <a href="#reserve" class="pf-jump" data-course="Video editing and animation">Reserve this course →</a>
+        </article>
+
+        <article class="t-card offer-card ac-program">
+          <span class="ac-tag">From SAVCLICK Digitex</span>
+          <h3>Digital marketing</h3>
+          <p>Grow a business online with social media, paid ads and content that gets results you can measure.</p>
+          <ul class="ac-points">
+            <li>Social media strategy</li>
+            <li>Paid ad campaigns</li>
+            <li>Content and copywriting</li>
+            <li>Reading the results</li>
+          </ul>
+          <a href="#reserve" class="pf-jump" data-course="Digital marketing">Reserve this course →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UPCOMING COURSES ============
+       To add a course: copy one <article class="course-row">. Put the day and
+       month in .course-date, the course in <h3>, and the details in .course-meta.
+       Keep data-course matching one of the options in the reservation form. -->
+  <section class="t-section alt" id="upcoming">
+    <div class="container">
+      <div class="t-head">
+        <h2>Upcoming courses</h2>
+        <p>Group classes with a set start date. Seats are limited, so reserve early.</p>
+      </div>
+
+      <div class="course-list">
+
+        <article class="course-row">
+          <div class="course-date"><span class="course-day">TBA</span><span class="course-month">Date</span></div>
+          <div class="course-info">
+            <h3>MacBook and logic board repair</h3>
+            <p class="course-meta">Group class · In person · Date to be announced</p>
+          </div>
+          <a href="#reserve" class="btn btn-ghost" data-course="MacBook and logic board repair">Reserve a seat</a>
+        </article>
+
+        <article class="course-row">
+          <div class="course-date"><span class="course-day">TBA</span><span class="course-month">Date</span></div>
+          <div class="course-info">
+            <h3>Web development</h3>
+            <p class="course-meta">Group class · In person · Date to be announced</p>
+          </div>
+          <a href="#reserve" class="btn btn-ghost" data-course="Web development">Reserve a seat</a>
+        </article>
+
+        <article class="course-row">
+          <div class="course-date"><span class="course-day">TBA</span><span class="course-month">Date</span></div>
+          <div class="course-info">
+            <h3>Graphic design</h3>
+            <p class="course-meta">Group class · In person · Date to be announced</p>
+          </div>
+          <a href="#reserve" class="btn btn-ghost" data-course="Graphic design">Reserve a seat</a>
+        </article>
+
+      </div>
+
+      <p class="course-note">Don't see a date that works? <a href="#reserve">Book a private session</a> and we'll train you on your schedule.</p>
+    </div>
+  </section>
+
+  <!-- ============ WAYS TO LEARN ============ -->
+  <section class="t-section" id="formats">
+    <div class="container">
+      <div class="t-head">
+        <h2>Ways to learn</h2>
+        <p>Pick the format that fits your time, budget and goals.</p>
+      </div>
+      <div class="t-grid cols-3">
+        <div class="t-card">
+          <h3>Group classes</h3>
+          <p>Learn alongside other students on a set schedule. A good way to start, with classmates to practise with.</p>
+        </div>
+        <div class="t-card">
+          <h3>Private one-on-one</h3>
+          <p>Training for just you, at times that suit you, going at your own pace and focused on what you need.</p>
+        </div>
+        <div class="t-card">
+          <h3>Team and corporate training</h3>
+          <p>Training for your staff, built around your business, at our space or yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="t-section board-feature" id="why">
+    <div class="container">
+      <div class="t-head">
+        <h2>Why learn with us</h2>
+        <p>Our trainers aren't only teachers. They repair Macs, build websites and run campaigns for SAVCLICK clients every week.</p>
+      </div>
+      <div class="t-grid cols-4">
+        <div class="t-card">
+          <h3>Taught by practitioners</h3>
+          <p>You learn from people who do this work for real clients, not only from slides.</p>
+        </div>
+        <div class="t-card">
+          <h3>Hands-on from day one</h3>
+          <p>Most of your time is spent practising on real tools, devices and projects.</p>
+        </div>
+        <div class="t-card">
+          <h3>Proper equipment</h3>
+          <p>Repair students train with the same microscopes, soldering and rework tools used in our workshop.</p>
+        </div>
+        <div class="t-card">
+          <h3>Small classes</h3>
+          <p>Fewer students per class, so every student gets attention and their questions answered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="t-section" id="how-it-works">
+    <div class="container">
+      <div class="t-head">
+        <h2>How it works</h2>
+        <p>Five steps from your first message to your new skill.</p>
+      </div>
+      <ol class="process">
+        <li class="process-step"><span class="process-circle">1</span><p>Choose</p></li>
+        <li class="process-step"><span class="process-circle">2</span><p>Reserve</p></li>
+        <li class="process-step"><span class="process-circle">3</span><p>Confirm</p></li>
+        <li class="process-step"><span class="process-circle">4</span><p>Learn</p></li>
+        <li class="process-step"><span class="process-circle">5</span><p>Practise</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ RESERVATION FORM ============
+       Submitting opens the visitor's email app with a prefilled message to
+       hello@savclick.com (see initReservationForm in script.js). -->
+  <section class="t-section alt" id="reserve">
+    <div class="container ac-reserve">
+      <div class="t-head">
+        <h2>Reserve a training</h2>
+        <p>Tell us what you'd like to learn and how. We'll get back to you to confirm dates, fees and the next steps.</p>
+        <ul class="ac-points ac-reserve-points">
+          <li>Group, private or team training</li>
+          <li>No payment needed to reserve</li>
+          <li>We confirm every request personally</li>
+        </ul>
+      </div>
+
+      <div class="contact-form-card ac-form-card">
+        <form id="reserveForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="rName">Full name</label>
+              <input type="text" id="rName" name="name" placeholder="Your full name" autocomplete="name" required>
+              <span class="field-error">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="rPhone">Phone or WhatsApp</label>
+              <input type="tel" id="rPhone" name="phone" placeholder="e.g. 0803 000 0000" autocomplete="tel" required>
+              <span class="field-error">Please enter a phone number.</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rEmail">Email address <span class="optional">(optional)</span></label>
+            <input type="email" id="rEmail" name="email" placeholder="you@email.com" autocomplete="email">
+            <span class="field-error">Please enter a valid email, or leave it empty.</span>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="rCourse">Course</label>
+              <select id="rCourse" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option>MacBook and logic board repair</option>
+                <option>Smart home automation</option>
+                <option>Web development</option>
+                <option>Graphic design</option>
+                <option>Video editing and animation</option>
+                <option>Digital marketing</option>
+                <option>Not sure yet</option>
+              </select>
+              <span class="field-error">Please select a course.</span>
+            </div>
+            <div class="field">
+              <label for="rFormat">Format</label>
+              <select id="rFormat" name="format" required>
+                <option value="" disabled selected>Select a format</option>
+                <option>Group class</option>
+                <option>Private one-on-one</option>
+                <option>Team or corporate training</option>
+              </select>
+              <span class="field-error">Please select a format.</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rStart">Preferred start date <span class="optional">(optional)</span></label>
+            <input type="date" id="rStart" name="start">
+          </div>
+
+          <div class="field">
+            <label for="rMessage">Anything we should know? <span class="optional">(optional)</span></label>
+            <textarea id="rMessage" name="message" rows="4" placeholder="Your experience level, goals, or questions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Send reservation request</button>
+        </form>
+
+        <div class="form-success" id="reserveSuccess" hidden>
+          <span class="success-icon">✓</span>
+          <h3>Almost done</h3>
+          <p>Your email app should now be open with your request filled in. Press send there to reach us. If nothing opened, email <a href="mailto:hello@savclick.com">hello@savclick.com</a> directly.</p>
+          <button type="button" class="btn btn-ghost" id="reserveReset">Make another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Your skill. Our experience.</h2>
+        <p>Whether you're starting from zero or levelling up, there's a course for you at SAVCLICK Academy.</p>
+        <p class="cta-tagline">Practical training. Real tools. Real work.</p>
+      </div>
+      <a href="#reserve" class="btn btn-primary btn-wa">Reserve a training</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="100" height="100">
+      </a>
+      <p>Excellently <b>empowering every choice</b> that you make</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Departments</h4>
+      <ul>
+        <li><a href="savclick-tech.html">SAVCLICK Tech</a></li>
+        <li><a href="savclick-digitex.html">SAVCLICK Digitex</a></li>
+        <li><a href="savclick-academy.html">SAVCLICK Academy</a></li>
+        <li><a href="#" data-construction="Travels">SAVCLICK Travels</a></li>
+        <li><a href="#" data-construction="Properties">SAVCLICK Properties</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="mailto:hello@savclick.com">hello@savclick.com</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SAVCLICK Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ CONSTRUCTION MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <span class="modal-icon">🚧</span>
+    <h3 id="modalTitle">SAVCLICK <span id="modalDept"></span> is under construction</h3>
+    <p>This department hasn't opened yet. We're building it as our next project after launch, check back soon.</p>
+    <button class="btn btn-primary" id="modalOk">Got it</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

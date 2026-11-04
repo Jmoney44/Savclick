@@ -49,7 +49,11 @@
       "actions media"
       "note    media"
       "suites  suites";
+    /* Extra height from a tall image goes into the "note" row, so the text
+       stack stays compact and buttons don't stretch. */
+    grid-template-rows: auto auto auto auto auto 1fr auto;
   }
+  .tech-hero-grid > :not(.area-media) { align-self: start; }
   .area-media { align-self: start; }
   .area-lead, .area-eyebrow, .area-crumb, .area-title { max-width: 560px; }
 }

@@ -1,0 +1,96 @@
+/* =========================================================
+   SAVCLICK Academy — department page (load after style.css + tech.css)
+   ========================================================= */
+
+/* ---------- Program cards ---------- */
+.ac-program { display: flex; flex-direction: column; gap: 4px; }
+.ac-program h3 { margin-top: 8px; }
+.ac-program > p { margin-bottom: 12px; }
+.ac-tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #0a7a58;
+}
+.ac-points { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.ac-points li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--navy-70);
+}
+.ac-points li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--savclick-mint-value);
+  flex-shrink: 0;
+}
+.pf-jump {
+  margin-top: auto;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--savclick-azure-action);
+}
+.pf-jump:hover { text-decoration: underline; }
+
+/* ---------- Upcoming course rows ---------- */
+/* Cards in a grid: 1 column on phones, 2 on tablets, and 3 or 4 on desktop
+   depending on how many courses there are (auto-fit fills the row). */
+.course-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 640px) { .course-list { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) {
+  .course-list { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+}
+.course-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--savclick-plat-bg);
+}
+.course-info { flex: 1; }
+.course-row .btn { align-self: stretch; justify-content: center; }
+.course-date {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  background: var(--savclick-azure-action);
+  color: var(--white);
+  line-height: 1.1;
+}
+.course-day { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.course-month { font-size: 0.72rem; opacity: 0.85; }
+.course-info h3 { font-size: 1.05rem; margin: 0 0 4px; }
+.course-meta { font-size: 0.88rem; color: var(--navy-70); margin: 0; }
+.course-note { margin: 20px 0 0; font-size: 0.92rem; color: var(--navy-70); }
+.course-note a { color: var(--savclick-azure-action); font-weight: 600; }
+
+/* ---------- Reservation ---------- */
+.ac-reserve { display: grid; grid-template-columns: 1fr; gap: 8px; align-items: start; }
+@media (min-width: 960px) { .ac-reserve { grid-template-columns: 0.8fr 1.2fr; gap: 48px; } }
+.ac-reserve-points { margin-top: 20px; }
+.ac-form-card {
+  padding: 24px;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background: var(--savclick-plat-bg);
+}
+@media (min-width: 640px) { .ac-form-card { padding: 32px; } }
+.form-success a { color: var(--savclick-azure-action); font-weight: 600; }
