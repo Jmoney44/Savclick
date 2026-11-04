@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initConstructionModal();
   initDirectoryReveal();
   initContactForm();
+  initPortfolioFilter();
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
@@ -194,4 +195,33 @@ function initContactForm() {
       if (successPanel) successPanel.hidden = true;
     });
   }
+}
+/* ---------- Portfolio filter (SAVCLICK Digitex) ---------- */
+function initPortfolioFilter() {
+  const tabs = document.querySelectorAll(".pf-tab");
+  if (!tabs.length) return;
+  const items = document.querySelectorAll(".pf-item");
+  const empty = document.getElementById("pfEmpty");
+
+  const apply = (filter) => {
+    tabs.forEach((tab) => {
+      const on = tab.dataset.filter === filter;
+      tab.classList.toggle("is-active", on);
+      tab.setAttribute("aria-pressed", String(on));
+    });
+    let shown = 0;
+    items.forEach((item) => {
+      const match = filter === "all" || item.dataset.service === filter;
+      item.hidden = !match;
+      if (match) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  };
+
+  tabs.forEach((tab) => tab.addEventListener("click", () => apply(tab.dataset.filter)));
+
+  // "See our work" links in the service cards jump down and pre-select a filter
+  document.querySelectorAll("[data-pf-jump]").forEach((link) => {
+    link.addEventListener("click", () => apply(link.dataset.pfJump));
+  });
 }

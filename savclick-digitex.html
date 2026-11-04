@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAVCLICK Digitex — Web, Graphics, Video and Digital Marketing</title>
+<meta name="description" content="SAVCLICK Digitex: web development, graphic design, video creation and editing, advertisement animation and digital marketing for businesses. Start a project on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tech.css">
+<link rel="stylesheet" href="digitex.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+
+    <a href="index.html" class="logo" aria-label="SAVCLICK home">
+      <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="40" height="40">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <div class="main-nav-head">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="34" height="34">
+        </a>
+        <button class="nav-close" id="navClose" aria-label="Close menu">×</button>
+      </div>
+
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+
+        <li class="has-dropdown">
+          <button class="nav-link dropdown-toggle active" id="deptToggle" aria-expanded="false" aria-controls="deptMenu">
+            Departments
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+
+          <div class="dropdown-menu" id="deptMenu">
+            <p class="dropdown-title">Choose a department</p>
+
+            <a class="dropdown-item" href="savclick-tech.html">
+              <img src="images/savclickTech.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Tech<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Logic board repair, Apple laptops, smart home automation</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-digitex.html" aria-current="page">
+              <img src="images/savclickdigitex.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Digitex<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Digital services and information hub</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-academy.html">
+              <img src="images/savclickacademy.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Academy<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Training programs and reservations</span>
+              </span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Travels">
+              <img src="images/savclicktravels.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Travels<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Properties">
+              <img src="images/savclickproperties.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Properties<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary btn-nav-mobile">Talk to us</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn-primary btn-nav">Talk to us</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="tech-hero">
+    <div class="container tech-hero-grid">
+
+      <nav class="breadcrumb area-crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="index.html#directory">Departments</a><span>/</span>SAVCLICK Digitex
+      </nav>
+
+      <p class="eyebrow area-eyebrow">Suite 02 · Digital services</p>
+
+      <h1 class="area-title">Your brand, built for the screen.</h1>
+
+      <p class="hero-sub area-lead">Websites, graphics, video and digital marketing for businesses that want to be seen and understood. Digitex is where SAVCLICK started in 2019, and creative digital work is still what we know best.</p>
+
+      <div class="area-media">
+        <img src="images/savclickdigitex.jpeg" alt="SAVCLICK Digitex: digital services and creative work" class="page-hero-img">
+      </div>
+
+      <ul class="tech-suites-list area-suites" aria-label="Everything under SAVCLICK Digitex">
+        <li>Web development</li>
+        <li>Graphic design</li>
+        <li>Video creation and editing</li>
+        <li>Digital marketing</li>
+      </ul>
+
+      <p class="hero-note area-note">Have an idea but no brief yet? Message us and we'll help you shape it.</p>
+
+      <div class="hero-actions area-actions">
+        <!-- TODO: replace # with the WhatsApp booking link -->
+        <a href="#" class="btn btn-primary" data-whatsapp>Start a project on WhatsApp</a>
+        <a href="#services" class="btn btn-ghost">See what we do</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE OFFER ============ -->
+  <section class="t-section" id="services">
+    <div class="container">
+      <div class="t-head">
+        <h2>What we offer</h2>
+        <p>Four disciplines that work on their own or together, depending on what your business needs.</p>
+      </div>
+      <div class="t-grid cols-4">
+        <div class="t-card offer-card">
+          <h3>Web development</h3>
+          <p>Business websites, landing pages and web apps that load fast, work on every phone and are easy for your customers to use.</p>
+          <a href="#portfolio" class="pf-jump" data-pf-jump="web">See our web work →</a>
+        </div>
+        <div class="t-card offer-card">
+          <h3>Graphic design</h3>
+          <p>Logos, brand identity, flyers, social media designs and print materials that make your business look the part.</p>
+          <a href="#portfolio" class="pf-jump" data-pf-jump="graphics">See our design work →</a>
+        </div>
+        <div class="t-card offer-card">
+          <h3>Video creation and editing</h3>
+          <p>Promotional videos, advertisement animation, product videos and edits of your own footage, ready to post or broadcast.</p>
+          <a href="#portfolio" class="pf-jump" data-pf-jump="video">See our video work →</a>
+        </div>
+        <div class="t-card offer-card">
+          <h3>Digital marketing</h3>
+          <p>Social media management, ad campaigns and content planning that put your business in front of the right people.</p>
+          <a href="#portfolio" class="pf-jump" data-pf-jump="marketing">See our campaigns →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WEB DEVELOPMENT ============ -->
+  <section class="t-section alt" id="web">
+    <div class="container">
+      <div class="t-head">
+        <h2>Web development</h2>
+        <p>A website is often the first place a customer meets your business. We build it to make a good first impression and to keep working after launch.</p>
+      </div>
+      <div class="t-grid cols-3">
+        <div class="t-card">
+          <h3>Business websites</h3>
+          <p>Clear, professional sites that explain what you do, show your work and make it easy for customers to reach you.</p>
+        </div>
+        <div class="t-card">
+          <h3>Landing pages</h3>
+          <p>Focused single pages for a product, event or campaign, built to turn visitors into enquiries.</p>
+        </div>
+        <div class="t-card">
+          <h3>Web applications</h3>
+          <p>Booking systems, dashboards and custom tools for businesses that need more than a brochure site.</p>
+        </div>
+        <div class="t-card">
+          <h3>Mobile-first design</h3>
+          <p>Most of your visitors are on a phone. Every site we build is designed and tested for small screens first.</p>
+        </div>
+        <div class="t-card">
+          <h3>Domain, hosting and setup</h3>
+          <p>We help you get the domain, hosting and business email set up properly so you don't have to figure it out alone.</p>
+        </div>
+        <div class="t-card">
+          <h3>Maintenance and updates</h3>
+          <p>Content updates, fixes and improvements after launch, so your site doesn't go stale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORYTELLING FEATURE ============ -->
+  <section class="t-section board-feature" id="storytelling">
+    <div class="container">
+      <div class="t-head">
+        <h2>Advertisement animation and storytelling</h2>
+        <p>This is where SAVCLICK began. Before we were a registered company, we were making animated adverts and telling stories for businesses, and it is still the heart of Digitex.</p>
+      </div>
+      <div class="t-grid cols-4">
+        <div class="t-card">
+          <h3>Animated adverts</h3>
+          <p>Short, eye-catching animations that explain your product or offer in seconds.</p>
+        </div>
+        <div class="t-card">
+          <h3>Brand stories</h3>
+          <p>Videos that show who you are, why you started and what makes your business different.</p>
+        </div>
+        <div class="t-card">
+          <h3>Explainer videos</h3>
+          <p>Complicated services made simple, so customers understand what they're paying for.</p>
+        </div>
+        <div class="t-card">
+          <h3>Social-ready formats</h3>
+          <p>Cut and sized for Instagram, TikTok, YouTube, WhatsApp Status and wherever else your customers are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GRAPHICS & MARKETING ============ -->
+  <section class="t-section" id="design-marketing">
+    <div class="container">
+      <div class="t-grid">
+        <div>
+          <div class="t-head">
+            <h2>Graphic design</h2>
+            <p>Consistent, professional visuals across everything your customers see.</p>
+          </div>
+          <ul class="gallery-list" aria-label="Graphic design services">
+            <li>Logo design</li>
+            <li>Brand identity</li>
+            <li>Social media graphics</li>
+            <li>Flyers and posters</li>
+            <li>Business cards</li>
+            <li>Banners and signage</li>
+            <li>Packaging and labels</li>
+          </ul>
+        </div>
+        <div>
+          <div class="t-head">
+            <h2>Digital marketing</h2>
+            <p>Getting your business in front of the people most likely to buy.</p>
+          </div>
+          <ul class="gallery-list" aria-label="Digital marketing services">
+            <li>Social media management</li>
+            <li>Paid ad campaigns</li>
+            <li>Content planning</li>
+            <li>Copywriting</li>
+            <li>Search engine optimisation</li>
+            <li>Performance reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============
+       To add a project: copy one <article class="pf-item">, set data-service to
+       web | graphics | video | marketing, and put an <img> (or <video>) inside
+       .pf-thumb, e.g. <div class="pf-thumb"><img src="images/portfolio/x.jpeg" alt="..."></div>
+       An empty .pf-thumb (no spaces inside) shows a placeholder. Delete any
+       placeholder cards you don't need. -->
+  <section class="t-section alt" id="portfolio">
+    <div class="container">
+      <div class="t-head">
+        <h2>Our work</h2>
+        <p>A look at projects we've delivered for businesses. Pick a service to see work from that team.</p>
+      </div>
+
+      <div class="pf-tabs" role="group" aria-label="Filter portfolio by service">
+        <button type="button" class="pf-tab is-active" data-filter="all" aria-pressed="true">All work</button>
+        <button type="button" class="pf-tab" data-filter="web" aria-pressed="false">Web development</button>
+        <button type="button" class="pf-tab" data-filter="graphics" aria-pressed="false">Graphic design</button>
+        <button type="button" class="pf-tab" data-filter="video" aria-pressed="false">Video and animation</button>
+        <button type="button" class="pf-tab" data-filter="marketing" aria-pressed="false">Digital marketing</button>
+      </div>
+
+      <div class="pf-grid" id="pfGrid">
+
+        <!-- WEB DEVELOPMENT -->
+        <article class="pf-item" data-service="web">
+          <div class="pf-thumb" data-label="Website screenshot"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Web development</span>
+            <h3>Project name</h3>
+            <p>Client and a one-line summary of what we built.</p>
+            <!-- TODO: link to the live site, or delete this line -->
+            <a href="#" class="pf-link" target="_blank" rel="noopener">Visit website →</a>
+          </div>
+        </article>
+
+        <article class="pf-item" data-service="web">
+          <div class="pf-thumb" data-label="Website screenshot"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Web development</span>
+            <h3>Project name</h3>
+            <p>Client and a one-line summary of what we built.</p>
+            <a href="#" class="pf-link" target="_blank" rel="noopener">Visit website →</a>
+          </div>
+        </article>
+
+        <!-- GRAPHIC DESIGN -->
+        <article class="pf-item" data-service="graphics">
+          <div class="pf-thumb" data-label="Logo or brand design"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Graphic design</span>
+            <h3>Project name</h3>
+            <p>Client and what we designed: logo, brand identity, flyers.</p>
+          </div>
+        </article>
+
+        <article class="pf-item" data-service="graphics">
+          <div class="pf-thumb" data-label="Social media or print design"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Graphic design</span>
+            <h3>Project name</h3>
+            <p>Client and what we designed: logo, brand identity, flyers.</p>
+          </div>
+        </article>
+
+        <!-- VIDEO AND ANIMATION
+             For a video, use: <video src="images/portfolio/x.mp4" controls muted playsinline preload="metadata"></video> -->
+        <article class="pf-item" data-service="video">
+          <div class="pf-thumb" data-label="Advert or animation"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Video and animation</span>
+            <h3>Project name</h3>
+            <p>Client and the kind of video: advert, explainer, brand story.</p>
+            <!-- TODO: link to YouTube / Instagram, or delete this line -->
+            <a href="#" class="pf-link" target="_blank" rel="noopener">Watch video →</a>
+          </div>
+        </article>
+
+        <article class="pf-item" data-service="video">
+          <div class="pf-thumb" data-label="Promo or edited video"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Video and animation</span>
+            <h3>Project name</h3>
+            <p>Client and the kind of video: advert, explainer, brand story.</p>
+            <a href="#" class="pf-link" target="_blank" rel="noopener">Watch video →</a>
+          </div>
+        </article>
+
+        <!-- DIGITAL MARKETING -->
+        <article class="pf-item" data-service="marketing">
+          <div class="pf-thumb" data-label="Campaign creative or results"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Digital marketing</span>
+            <h3>Campaign name</h3>
+            <p>Client, the platforms used and the result the campaign achieved.</p>
+          </div>
+        </article>
+
+        <article class="pf-item" data-service="marketing">
+          <div class="pf-thumb" data-label="Social media page"></div>
+          <div class="pf-body">
+            <span class="pf-cat">Digital marketing</span>
+            <h3>Campaign name</h3>
+            <p>Client, the platforms used and the result the campaign achieved.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="pf-empty" id="pfEmpty" hidden>New projects for this service are coming soon.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="t-section" id="why">
+    <div class="container">
+      <div class="t-head">
+        <h2>Why choose us</h2>
+        <p>We measure every project by one question: does this actually make things easier for the person on the other end of it?</p>
+      </div>
+      <div class="t-grid cols-3">
+        <div class="t-card">
+          <h3>Experience since 2019</h3>
+          <p>Digital and creative work is where SAVCLICK started, and we've been doing it for businesses ever since.</p>
+        </div>
+        <div class="t-card">
+          <h3>One team, every discipline</h3>
+          <p>Web, design, video and marketing under one roof, so your brand looks and sounds the same everywhere.</p>
+        </div>
+        <div class="t-card">
+          <h3>Clear communication</h3>
+          <p>You'll know what we're building, how long it will take and what it will cost before we start.</p>
+        </div>
+        <div class="t-card">
+          <h3>Built around your goals</h3>
+          <p>We start with what you want the work to achieve, then design to that, not the other way round.</p>
+        </div>
+        <div class="t-card">
+          <h3>Revisions included</h3>
+          <p>We review drafts with you and refine them until the work is right.</p>
+        </div>
+        <div class="t-card">
+          <h3>We finish what we start</h3>
+          <p>A promise the founders made in 2019, and one we still deliver on, on time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="t-section alt" id="how-it-works">
+    <div class="container">
+      <div class="t-head">
+        <h2>How a project works</h2>
+        <p>Five steps from first message to finished work.</p>
+      </div>
+      <ol class="process">
+        <li class="process-step"><span class="process-circle">1</span><p>Brief</p></li>
+        <li class="process-step"><span class="process-circle">2</span><p>Plan</p></li>
+        <li class="process-step"><span class="process-circle">3</span><p>Create</p></li>
+        <li class="process-step"><span class="process-circle">4</span><p>Review</p></li>
+        <li class="process-step"><span class="process-circle">5</span><p>Deliver</p></li>
+      </ol>
+      <div class="hero-actions" style="margin-top:40px; justify-content:center">
+        <a href="#" class="btn btn-primary" data-whatsapp>Start a project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MORE ============ -->
+  <section class="t-section" id="more">
+    <div class="container">
+      <div class="t-head">
+        <h2>More from SAVCLICK Digitex</h2>
+      </div>
+      <div class="link-grid">
+        <div class="link-card">
+          <h3>See our work</h3>
+          <p>Browse websites, designs and videos we've made for businesses like yours.</p>
+          <a href="#portfolio" class="btn btn-primary">View portfolio</a>
+        </div>
+        <div class="link-card">
+          <h3>Learn digital skills</h3>
+          <p>Want to learn web development, graphic design or video editing yourself? See what SAVCLICK Academy offers.</p>
+          <a href="savclick-academy.html" class="btn btn-primary">Go to SAVCLICK Academy</a>
+        </div>
+        <div class="link-card">
+          <h3>Ask a question</h3>
+          <p>Not sure which service you need? Send us a message and we'll point you in the right direction.</p>
+          <a href="contact.html" class="btn btn-ghost">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Your idea. Our craft.</h2>
+        <p>Whether you need a website, a new logo, an animated advert or a marketing campaign, tell us what you have in mind and we'll take it from there.</p>
+        <p class="cta-tagline">Web. Graphics. Video. Digital marketing.</p>
+      </div>
+      <a href="#" class="btn btn-primary btn-wa" data-whatsapp>Start a project on WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="100" height="100">
+      </a>
+      <p>Excellently <b>empowering every choice</b> that you make</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Departments</h4>
+      <ul>
+        <li><a href="savclick-tech.html">SAVCLICK Tech</a></li>
+        <li><a href="savclick-digitex.html">SAVCLICK Digitex</a></li>
+        <li><a href="savclick-academy.html">SAVCLICK Academy</a></li>
+        <li><a href="#" data-construction="Travels">SAVCLICK Travels</a></li>
+        <li><a href="#" data-construction="Properties">SAVCLICK Properties</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="mailto:hello@savclick.com">hello@savclick.com</a></li>
+        <li><a href="contact.html">Contact page</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SAVCLICK Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ CONSTRUCTION MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <span class="modal-icon">🚧</span>
+    <h3 id="modalTitle">SAVCLICK <span id="modalDept"></span> is under construction</h3>
+    <p>This department hasn't opened yet. We're building it as our next project after launch, check back soon.</p>
+    <button class="btn btn-primary" id="modalOk">Got it</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
