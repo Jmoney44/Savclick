@@ -1,0 +1,75 @@
+/* =========================================================
+   SAVCLICK Tech — Smart Home/Hotel Automation (load after style.css + tech.css)
+   ========================================================= */
+
+/* ---------- Hero: illustrated control panel ---------- */
+.sh-panel {
+  background: linear-gradient(160deg, #13203d 0%, var(--savclick-navy-primary) 70%);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 24px 56px rgba(15, 23, 42, 0.22);
+}
+.sh-panel-head { display: flex; flex-direction: column; gap: 2px; margin-bottom: 18px; }
+.sh-panel-title { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; }
+.sh-panel-sub { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); }
+
+.sh-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.sh-tile {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.sh-tile svg { width: 26px; height: 26px; margin-bottom: 10px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: rgba(255, 255, 255, 0.55); }
+.sh-tile-name { font-weight: 600; font-size: 0.88rem; }
+.sh-tile-state { font-size: 0.76rem; color: rgba(255, 255, 255, 0.55); }
+.sh-tile.is-on { background: var(--white); color: var(--savclick-navy-primary); border-color: var(--white); }
+.sh-tile.is-on svg { color: var(--savclick-azure-action); }
+.sh-tile.is-on .sh-tile-state { color: var(--savclick-azure-action); }
+
+.sh-scene {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 14px; padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.22);
+  font-size: 0.86rem;
+}
+.sh-scene span:first-child { color: rgba(255, 255, 255, 0.6); }
+.sh-scene-btn { margin-left: auto; padding: 5px 14px; border-radius: 999px; background: var(--savclick-azure-action); font-weight: 600; font-size: 0.8rem; }
+
+@media (max-width: 420px) {
+  .sh-panel { padding: 18px; }
+  .sh-tiles { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Homes vs hotels ---------- */
+.sh-audience { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 860px) { .sh-audience { grid-template-columns: 1fr 1fr; } }
+.sh-audience-card {
+  padding: 30px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--savclick-plat-bg);
+  border: 1px solid var(--border-hairline);
+}
+.sh-audience-card h3 { font-size: 1.3rem; margin: 12px 0 16px; }
+.sh-audience-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem; font-weight: 600;
+  background: var(--azure-08); color: var(--savclick-azure-action);
+}
+.sh-audience-card.is-dark { background: var(--savclick-navy-primary); color: var(--white); border-color: var(--savclick-navy-primary); }
+.sh-audience-card.is-dark .sh-audience-tag { background: rgba(255, 255, 255, 0.1); color: var(--white); }
+.sh-audience-card.is-dark .sh-list li { color: rgba(255, 255, 255, 0.8); }
+.sh-audience-card.is-dark .sh-list li::before { background: var(--savclick-mint-value); }
+
+.sh-list { display: flex; flex-direction: column; gap: 10px; }
+.sh-list li { position: relative; padding-left: 22px; color: var(--navy-70); font-size: 0.95rem; }
+.sh-list li::before {
+  content: ""; position: absolute; left: 2px; top: 0.55em;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--savclick-azure-action);
+}

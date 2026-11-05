@@ -32,6 +32,12 @@
 
   const state = { query: "", category: "All", page: 1 };
 
+  // Allow links like shop.html?category=Smart%20Home or shop.html?q=charger
+  const params = new URLSearchParams(window.location.search);
+  const startCat = params.get("category");
+  if (startCat && products.some((p) => p.category === startCat)) state.category = startCat;
+  if (params.get("q")) state.query = params.get("q").trim();
+
   /* ---------- Helpers ---------- */
   const escapeHtml = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -216,5 +222,6 @@
     if (e.key === "Escape") closeProduct();
   });
 
+  els.search.value = state.query;
   render();
 })();
