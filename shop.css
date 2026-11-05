@@ -1,0 +1,149 @@
+/* =========================================================
+   SAVCLICK Shop (load after style.css + tech.css)
+   ========================================================= */
+
+.shop-hero { padding: 40px 0 8px; }
+.shop-hero h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin-bottom: 10px; }
+.shop-hero .hero-sub { max-width: 640px; color: var(--navy-70); margin-bottom: 0; }
+
+/* ---------- Toolbar: search + chips ---------- */
+.shop-section { padding: 28px 0 72px; scroll-margin-top: calc(var(--header-h) + 12px); }
+.shop-toolbar { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
+
+.shop-search { position: relative; max-width: 560px; }
+.shop-search svg { position: absolute; left: 16px; top: 50%; width: 20px; height: 20px; transform: translateY(-50%); color: var(--navy-70); pointer-events: none; }
+.shop-search input {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  padding: 14px 46px 14px 48px;
+  border: 1px solid var(--navy-14);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--color-text-main);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.shop-search input::-webkit-search-cancel-button { display: none; }
+.shop-search input:focus { outline: none; border-color: var(--savclick-azure-action); box-shadow: 0 0 0 4px var(--azure-16); }
+.shop-clear {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  width: 34px; height: 34px; border-radius: 50%;
+  font-size: 1.3rem; line-height: 1; color: var(--navy-70);
+}
+.shop-clear:hover { background: var(--navy-06); }
+
+.shop-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.shop-chip {
+  font-size: 0.9rem; font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid var(--border-hairline);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--navy-70);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.shop-chip:hover { border-color: var(--savclick-navy-primary); color: var(--savclick-navy-primary); }
+.shop-chip.is-active { background: var(--savclick-azure-action); border-color: var(--savclick-azure-action); color: var(--white); }
+
+.shop-count { font-size: 0.9rem; color: var(--navy-70); margin: 0 0 16px; min-height: 1.4em; }
+
+/* ---------- Product grid ---------- */
+.shop-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (min-width: 720px)  { .shop-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; } }
+@media (min-width: 1024px) { .shop-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; } }
+
+.shop-card {
+  width: 100%; height: 100%;
+  padding: 0;
+  font: inherit;
+  display: flex; flex-direction: column;
+  text-align: left;
+  background: var(--white);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.shop-card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(15, 23, 42, 0.10); border-color: var(--azure-16); }
+.shop-card:focus-visible { outline: 3px solid var(--azure-16); outline-offset: 2px; border-color: var(--savclick-azure-action); }
+
+.shop-card-media { display: block; aspect-ratio: 4 / 3; background: var(--navy-06); }
+.shop-card-media img, .product-media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Placeholder tile when a product has no photo yet */
+.shop-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--savclick-azure-action); background: linear-gradient(135deg, #eef3ff, #f8fafc); }
+.shop-ph svg { width: 34%; max-width: 72px; height: auto; }
+.shop-ph[data-cat="Parts"]       { color: #0f766e; background: linear-gradient(135deg, #e7f6f3, #f8fafc); }
+.shop-ph[data-cat="Accessories"] { color: #7c3aed; background: linear-gradient(135deg, #f1ecff, #f8fafc); }
+.shop-ph[data-cat="Smart Home"]  { color: #b45309; background: linear-gradient(135deg, #fdf3e3, #f8fafc); }
+
+.shop-card-body { display: flex; flex-direction: column; gap: 4px; padding: 14px 14px 16px; flex: 1; }
+.shop-card-cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy-70); }
+.shop-card-name { font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; line-height: 1.3; }
+.shop-card-price { margin-top: auto; padding-top: 8px; font-size: 0.88rem; font-weight: 600; color: var(--savclick-azure-action); }
+
+.shop-empty { text-align: center; padding: 48px 20px; border: 1px dashed var(--navy-14); border-radius: var(--radius-md); background: var(--white); }
+.shop-empty h3 { font-size: 1.1rem; }
+.shop-empty p { color: var(--navy-70); }
+
+/* ---------- Pagination ---------- */
+.shop-pager { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.pager-nums { display: flex; align-items: center; gap: 6px; }
+.pager-btn {
+  min-width: 42px; height: 42px; padding: 0 12px;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  font-weight: 600; font-size: 0.92rem;
+  color: var(--color-text-main);
+}
+.pager-btn:hover:not(:disabled) { border-color: var(--savclick-navy-primary); }
+.pager-btn.is-current { background: var(--savclick-azure-action); border-color: var(--savclick-azure-action); color: var(--white); }
+.pager-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.pager-wide { padding: 0 16px; }
+.pager-gap { color: var(--navy-70); padding: 0 2px; }
+@media (max-width: 479px) {
+  .shop-pager { gap: 8px; }
+  .pager-nums { order: -1; width: 100%; justify-content: center; }
+  .pager-wide { flex: 1; }
+}
+
+/* ---------- Product popup ---------- */
+.product-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+}
+.product-overlay.is-open { display: flex; }
+.product-modal {
+  position: relative;
+  width: 100%; max-width: 520px; max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.3);
+}
+.product-media { display: block; aspect-ratio: 16 / 9; background: var(--navy-06); }
+.product-body { padding: 24px 26px 26px; }
+.product-cat { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy-70); margin: 0 0 6px; }
+.product-body h3 { font-size: 1.35rem; color: var(--savclick-navy-primary); margin-bottom: 8px; }
+.product-price { font-weight: 600; color: var(--savclick-azure-action); margin-bottom: 14px; }
+.product-desc { color: var(--navy-70); font-size: 0.97rem; margin-bottom: 22px; }
+.product-buy { width: 100%; justify-content: center; gap: 10px; background: #25d366; color: #fff; }
+.product-buy:hover { background: #1ebe5b; }
+.product-buy svg { width: 20px; height: 20px; }
+.product-note { font-size: 0.82rem; color: var(--navy-70); text-align: center; margin: 10px 0 0; }
+.product-close {
+  position: absolute; top: 12px; right: 12px; z-index: 1;
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+  font-size: 1.4rem; line-height: 1; color: var(--savclick-navy-primary);
+}
+.product-close:hover { background: var(--white); }
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
