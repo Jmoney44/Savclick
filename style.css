@@ -212,6 +212,11 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .dropdown-desc { font-size: 0.8rem; color: var(--navy-70); line-height: 1.4; }
 .dropdown-item.is-locked { opacity: 0.85; }
 .dropdown-divider { height: 1px; background: var(--border-hairline); margin: 6px 8px; }
+/* Sub-links under a department (e.g. SAVCLICK Tech) */
+.dropdown-sub { display: flex; flex-direction: column; margin: -4px 0 4px 58px; padding-left: 10px; border-left: 2px solid var(--border-hairline); }
+.dropdown-subitem { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; padding: 6px 10px; border-radius: 8px; font-size: 0.86rem; font-weight: 500; color: var(--navy-70); }
+.dropdown-subitem:hover { background: var(--azure-08); color: var(--savclick-azure-action); }
+.dropdown-subitem[aria-current="page"] { color: var(--savclick-azure-action); font-weight: 600; }
 
 .tag { font-size: 0.68rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
 .tag-open { background: rgba(16, 185, 129, 0.12); color: #0a7a58; }
@@ -388,6 +393,8 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   .dropdown-title { padding: 6px 8px 2px; }
   .dropdown-item { padding: 10px 8px; }
   .dropdown-name { flex-wrap: wrap; row-gap: 4px; }
+  .dropdown-sub { margin-left: 50px; }
+  .dropdown-subitem { padding: 9px 10px; font-size: 0.92rem; }
 
   .btn-nav { display: none; }
   .btn-nav-mobile { display: flex; flex-shrink: 0; justify-content: center; margin-top: 18px; }
