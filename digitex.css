@@ -102,24 +102,3 @@
 .pf-link:hover { text-decoration: underline; }
 
 .pf-empty { color: var(--navy-70); font-size: 0.95rem; }
-
-/* ---------- Hero: banner runs full width on desktop ----------
-   Overrides the two-column tech.css hero grid. The banner sits under the
-   breadcrumb across the whole container, with the text stack below it. */
-@media (min-width: 960px) {
-  .digitex-hero .tech-hero-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-template-areas:
-      "crumb"
-      "media"
-      "eyebrow"
-      "title"
-      "lead"
-      "actions"
-      "note"
-      "suites";
-  }
-  .digitex-hero .area-media { margin: 6px 0 22px; }
-  .digitex-hero .area-lead { max-width: 720px; }
-}
