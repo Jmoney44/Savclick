@@ -319,6 +319,17 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .site-footer { padding: 64px 0 24px; background: var(--savclick-plat-bg); }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 28px; padding-bottom: 40px; border-bottom: 1px solid var(--border-hairline); }
 .footer-brand p { color: var(--navy-70); font-size: 0.9rem; margin-top: 14px; max-width: 240px; }
+.footer-social { margin-top: 22px; }
+.footer-brand .footer-social .footer-label { display: block; margin: 0 0 10px; font-size: 0.76rem; }
+.footer-social ul { display: flex; flex-wrap: wrap; gap: 10px; }
+.footer-social a {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--navy-14); color: var(--savclick-navy-primary);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.footer-social a:hover { background: var(--savclick-azure-action); border-color: var(--savclick-azure-action); color: var(--white); }
+.footer-social svg { width: 19px; height: 19px; }
 .footer-col h4 { font-size: 0.86rem; margin-bottom: 14px; color: var(--navy-70); font-weight: 600; }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col a { font-size: 0.92rem; }
