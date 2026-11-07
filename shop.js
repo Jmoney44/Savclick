@@ -24,6 +24,7 @@
     pCat: document.getElementById("productCategory"),
     pPrice: document.getElementById("productPrice"),
     pDesc: document.getElementById("productDesc"),
+    pSpecs: document.getElementById("productSpecs"),
     pMedia: document.getElementById("productMedia"),
     pBuy: document.getElementById("productBuy"),
     pClose: document.getElementById("productClose"),
@@ -43,14 +44,18 @@
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   const ICONS = {
-    MacBooks: '<path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h11A1.5 1.5 0 0 1 19 6.5V15H5z"/><path d="M2.5 15h19l-1 2.5a1 1 0 0 1-.93.63H4.43a1 1 0 0 1-.93-.63z"/>',
-    Parts: '<rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/>',
-    Accessories: '<path d="M9 3v4M15 3v4"/><path d="M7 7h10v4a5 5 0 0 1-10 0z"/><path d="M12 16v5"/>',
+    "MacBook Devices": '<path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h11A1.5 1.5 0 0 1 19 6.5V15H5z"/><path d="M2.5 15h19l-1 2.5a1 1 0 0 1-.93.63H4.43a1 1 0 0 1-.93-.63z"/>',
+    "MacBook Parts": '<rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/>',
     "Smart Home": '<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M9.5 15.5a3.5 3.5 0 0 1 5 0M11 17.5a1.4 1.4 0 0 1 2 0"/>',
+    "Smart Office": '<path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16"/><path d="M15 10h4a1 1 0 0 1 1 1v10M3 21h18"/><path d="M8 8h3M8 12h3M8 16h3"/>',
+    "Private Cinema": '<rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="m10 7.5 4.5 2.5-4.5 2.5z"/><path d="M7 20h10M12 16v4"/>',
+    "Short-Let Automation": '<circle cx="8" cy="15" r="4"/><path d="m11 12 8-8M16 7l2 2M14 9l2 2"/>',
+    "Hotel Automation": '<path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/>',
+    "Networking & Power": '<path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.2" r=".9"/>',
   };
   const iconFor = (cat) =>
     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${
-      ICONS[cat] || ICONS.Accessories
+      ICONS[cat] || ICONS["Smart Home"]
     }</svg>`;
 
   const mediaHtml = (p) =>
@@ -71,7 +76,7 @@
     return products.filter((p) => {
       if (state.category !== "All" && p.category !== state.category) return false;
       if (!words.length) return true;
-      const hay = `${p.name} ${p.category} ${p.description}`.toLowerCase();
+      const hay = `${p.name} ${p.category} ${p.description} ${p.specs || ""}`.toLowerCase();
       return words.every((w) => hay.includes(w));
     });
   };
@@ -197,6 +202,9 @@
     els.pCat.textContent = p.category;
     els.pPrice.textContent = priceText(p);
     els.pDesc.textContent = p.description;
+    const specs = (p.specs || "").split(";").map((x) => x.trim().replace(/\.$/, "")).filter(Boolean).map((x) => x.charAt(0).toUpperCase() + x.slice(1));
+    els.pSpecs.innerHTML = specs.map((x) => `<li>${escapeHtml(x)}</li>`).join("");
+    els.pSpecs.hidden = specs.length === 0;
     els.pMedia.innerHTML = mediaHtml(p);
     els.pBuy.href = waLink(p);
     els.overlay.classList.add("is-open");
