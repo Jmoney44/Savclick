@@ -211,6 +211,47 @@
     </div>
   </section>
 
+  <!-- ============ VIDEO CAROUSEL ============ -->
+  <section class="t-section alt vc-section" id="in-action" aria-labelledby="vcTitle">
+    <div class="container vc-grid">
+      <div class="vc-copy">
+        <p class="eyebrow">Our work</p>
+        <h2 id="vcTitle">See it in action</h2>
+        <p class="vc-lead">Real smart home installations by SAVCLICK Tech.</p>
+        <div class="vc-caption" aria-live="polite">
+          <p class="vc-count"><span id="vcIndex">01</span> / 05</p>
+          <h3 id="vcSlideTitle">Lighting scenes at a touch</h3>
+          <p id="vcSlideDesc">Change the colour and mood of a whole room from one wall touch panel.</p>
+        </div>
+        <div class="vc-controls">
+          <button type="button" class="vc-btn" id="vcPrev" aria-label="Previous video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="vc-btn" id="vcToggle" aria-label="Pause slideshow"><svg viewBox="0 0 24 24" aria-hidden="true" class="vc-ico-pause"><path d="M9 5v14M15 5v14"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="vc-ico-play"><path d="M8 5l11 7-11 7z"/></svg></button>
+          <button type="button" class="vc-btn" id="vcNext" aria-label="Next video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="vc-stage" id="vcStage" aria-roledescription="carousel" aria-label="Smart home installation videos">
+        <div class="vc-segs"><button type="button" class="vc-seg is-active" data-go="0" aria-label="Show video 1: Lighting scenes at a touch"><span></span></button><button type="button" class="vc-seg" data-go="1" aria-label="Show video 2: Curtains on a remote"><span></span></button><button type="button" class="vc-seg" data-go="2" aria-label="Show video 3: Custom home cinema"><span></span></button><button type="button" class="vc-seg" data-go="3" aria-label="Show video 4: Smart blinds"><span></span></button><button type="button" class="vc-seg" data-go="4" aria-label="Show video 5: Everything from your phone"><span></span></button></div>
+        <ul class="vc-track">
+          <li class="vc-slide is-active" data-title="Lighting scenes at a touch" data-desc="Change the colour and mood of a whole room from one wall touch panel." aria-roledescription="slide" aria-label="1 of 5: Lighting scenes at a touch">
+            <video src="videos/smart-home/lighting-panel.mp4" poster="videos/smart-home/lighting-panel.jpg" muted loop playsinline preload="auto"></video>
+          </li>
+          <li class="vc-slide" data-title="Curtains on a remote" data-desc="Open and close motorised curtains without leaving your seat." aria-roledescription="slide" aria-label="2 of 5: Curtains on a remote">
+            <video src="videos/smart-home/remote-curtains.mp4" poster="videos/smart-home/remote-curtains.jpg" muted loop playsinline preload="none"></video>
+          </li>
+          <li class="vc-slide" data-title="Custom home cinema" data-desc="Starlight ceiling, ambient lighting and a big screen, all controlled together." aria-roledescription="slide" aria-label="3 of 5: Custom home cinema">
+            <video src="videos/smart-home/home-cinema.mp4" poster="videos/smart-home/home-cinema.jpg" muted loop playsinline preload="none"></video>
+          </li>
+          <li class="vc-slide" data-title="Smart blinds" data-desc="Blinds that adjust on their own to let in just the right amount of light." aria-roledescription="slide" aria-label="4 of 5: Smart blinds">
+            <video src="videos/smart-home/smart-blinds.mp4" poster="videos/smart-home/smart-blinds.jpg" muted loop playsinline preload="none"></video>
+          </li>
+          <li class="vc-slide" data-title="Everything from your phone" data-desc="Lights, curtains and more, controlled from one app." aria-roledescription="slide" aria-label="5 of 5: Everything from your phone">
+            <video src="videos/smart-home/app-control.mp4" poster="videos/smart-home/app-control.jpg" muted loop playsinline preload="none"></video>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ WHAT WE AUTOMATE ============ -->
   <section class="t-section" id="services">
     <div class="container">
@@ -442,5 +483,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="smart-home.js"></script>
 </body>
 </html>
