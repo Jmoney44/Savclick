@@ -162,3 +162,19 @@
   .shop-chips::-webkit-scrollbar { display: none; }
   .shop-chip { flex-shrink: 0; }
 }
+
+/* Product popup: show the whole photo */
+.product-media img { object-fit: contain; background: var(--white); }
+.product-credit { font-size: 0.76rem; color: var(--navy-70); margin: -10px 0 18px; line-height: 1.5; }
+.product-credit a, .shop-credits a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Similar-item note and photo credits under the catalogue */
+.shop-photo-note { margin: 32px 0 0; font-size: 0.86rem; color: var(--navy-70); text-align: center; }
+.shop-credits { margin-top: 16px; font-size: 0.8rem; color: var(--navy-70); }
+.shop-credits summary { cursor: pointer; text-align: center; font-weight: 600; padding: 6px; }
+.shop-credits ul { display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 12px; }
+@media (min-width: 720px) { .shop-credits ul { grid-template-columns: 1fr 1fr; } }
+
+/* Keep every card photo at 4:3 whatever the photo's shape */
+.shop-card-media { position: relative; overflow: hidden; }
+.shop-card-media img { position: absolute; inset: 0; }
