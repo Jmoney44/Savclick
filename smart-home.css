@@ -73,3 +73,8 @@
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--savclick-azure-action);
 }
+
+/* ---------- Hero list: one item per line on phones ---------- */
+@media (max-width: 639px) {
+  .sh-suites { flex-direction: column; gap: 10px; }
+}
