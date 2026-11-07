@@ -233,7 +233,7 @@ function initPortfolioFilter() {
 function initReservationForm() {
   const form = document.getElementById("reserveForm");
   if (!form) return;
-  const RESERVE_EMAIL = "hello@savclick.com";
+  const RESERVE_EMAIL = "support@savclick.com";
   const success = document.getElementById("reserveSuccess");
   const resetBtn = document.getElementById("reserveReset");
   const course = document.getElementById("rCourse");
