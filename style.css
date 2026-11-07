@@ -323,6 +323,11 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col a { font-size: 0.92rem; }
 .footer-col a:hover { color: var(--savclick-azure-action); }
+.footer-contact { gap: 16px !important; }
+.footer-contact li { display: flex; flex-direction: column; gap: 2px; }
+.footer-label { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.02em; color: var(--navy-70); }
+.footer-contact address { font-style: normal; font-size: 0.92rem; line-height: 1.5; }
+.footer-sub { font-size: 0.84rem !important; color: var(--savclick-azure-action); }
 .footer-bottom { padding-top: 22px; font-size: 0.85rem; color: var(--navy-70); }
 
 /* ---------- Construction modal ---------- */
