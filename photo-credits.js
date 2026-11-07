@@ -1,8 +1,9 @@
 /* =========================================================
    SAVCLICK Shop — photo credits
    Openly licensed photos found through Openverse (openverse.org).
-   Most licences require credit, which the shop shows in each product popup
-   and in the "Photo credits" list at the bottom of the shop page.
+   NOTE: this file is no longer loaded by shop.html (credits were removed
+   from the shop at the owner's request). Most of these licences require
+   credit; add <script src="photo-credits.js"></script> back to restore it.
    If you replace a photo with your own, delete its entry here.
    ========================================================= */
 
