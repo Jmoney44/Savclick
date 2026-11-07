@@ -146,3 +146,48 @@
   .sh-show-label { min-height: 96px; font-size: 1.2rem; }
   .sh-showcase-btn { width: 100%; justify-content: center; padding: 20px 24px; }
 }
+
+/* ---------- Video carousel ("See it in action") ---------- */
+.vc-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
+@media (min-width: 900px) { .vc-grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
+
+.vc-copy h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.vc-lead { color: var(--navy-70); margin-bottom: 28px; }
+.vc-caption { border-left: 3px solid var(--savclick-azure-action); padding: 4px 0 4px 18px; margin-bottom: 28px; min-height: 118px; }
+.vc-count { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; color: var(--navy-70); margin: 0 0 6px; }
+.vc-count span { color: var(--savclick-azure-action); }
+.vc-caption h3 { font-size: 1.3rem; color: var(--savclick-navy-primary); margin-bottom: 6px; }
+.vc-caption p:last-child { color: var(--navy-70); margin: 0; }
+
+.vc-controls { display: flex; gap: 10px; }
+.vc-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--navy-14); background: var(--white); color: var(--savclick-navy-primary);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.vc-btn:hover { background: var(--savclick-navy-primary); border-color: var(--savclick-navy-primary); color: var(--white); }
+.vc-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vc-btn .vc-ico-play { display: none; fill: currentColor; stroke: none; }
+.vc-section.is-paused .vc-ico-pause { display: none; }
+.vc-section.is-paused .vc-ico-play { display: block; }
+
+.vc-stage {
+  position: relative;
+  width: 100%; max-width: 380px; margin: 0 auto;
+  aspect-ratio: 480 / 784;
+  border-radius: 22px; overflow: hidden;
+  background: var(--savclick-navy-primary);
+  box-shadow: 0 28px 64px rgba(15, 23, 42, 0.25);
+}
+@media (min-width: 900px) { .vc-stage { margin: 0; justify-self: center; } }
+.vc-track { position: absolute; inset: 0; }
+.vc-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.6s ease; }
+.vc-slide.is-active { opacity: 1; }
+.vc-slide video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Story-style progress bars across the top of the video */
+.vc-segs { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; gap: 6px; padding: 14px 14px 24px; background: linear-gradient(rgba(0, 0, 0, 0.45), transparent); }
+.vc-seg { flex: 1; height: 16px; padding: 6px 0; display: flex; align-items: center; }
+.vc-seg span { position: relative; display: block; width: 100%; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, 0.35); overflow: hidden; }
+.vc-seg span::after { content: ""; position: absolute; inset: 0; background: var(--white); transform-origin: left; transform: scaleX(var(--p, 0)); }
