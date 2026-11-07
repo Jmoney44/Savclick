@@ -25,6 +25,7 @@
     pPrice: document.getElementById("productPrice"),
     pDesc: document.getElementById("productDesc"),
     pSpecs: document.getElementById("productSpecs"),
+    pCredit: document.getElementById("productCredit"),
     pMedia: document.getElementById("productMedia"),
     pBuy: document.getElementById("productBuy"),
     pClose: document.getElementById("productClose"),
@@ -69,6 +70,19 @@
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       `Hello SAVCLICK, I'd like to buy: ${p.name}${p.price ? ` (${p.price})` : ""}. Is it available?`
     )}`;
+
+  /* ---------- Photo credits (photo-credits.js) ---------- */
+  const CREDITS = typeof SHOP_PHOTO_CREDITS !== "undefined" ? SHOP_PHOTO_CREDITS : {};
+  const creditHtml = (c) =>
+    `<a href="${escapeHtml(c.source)}" target="_blank" rel="noopener">${escapeHtml(c.title)}</a>` +
+    (c.creator ? ` by ${escapeHtml(c.creator)}` : "") +
+    `, <a href="${escapeHtml(c.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(c.license)}</a>`;
+  const creditsList = document.getElementById("shopCreditsList");
+  if (creditsList) {
+    const entries = Object.values(CREDITS);
+    creditsList.innerHTML = entries.map((c) => `<li>${creditHtml(c)}</li>`).join("");
+    if (!entries.length) document.getElementById("shopCredits").hidden = true;
+  }
 
   /* ---------- Filtering ---------- */
   const filtered = () => {
@@ -205,6 +219,9 @@
     const specs = (p.specs || "").split(";").map((x) => x.trim().replace(/\.$/, "")).filter(Boolean).map((x) => x.charAt(0).toUpperCase() + x.slice(1));
     els.pSpecs.innerHTML = specs.map((x) => `<li>${escapeHtml(x)}</li>`).join("");
     els.pSpecs.hidden = specs.length === 0;
+    const credit = p.image && CREDITS[p.image];
+    els.pCredit.innerHTML = credit ? `Photo (similar item): ${creditHtml(credit)}` : "";
+    els.pCredit.hidden = !credit;
     els.pMedia.innerHTML = mediaHtml(p);
     els.pBuy.href = waLink(p);
     els.overlay.classList.add("is-open");
