@@ -451,6 +451,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .page-hero-copy h1 { font-size: clamp(2rem, 5.5vw, 2.9rem); letter-spacing: -0.01em; }
 .page-hero-img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 24px 56px rgba(15, 23, 42, 0.18); }
 @media (min-width: 960px) { .page-hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 56px; } }
+@media (min-width: 960px) { .page-hero-grid.media-left { grid-template-columns: 0.95fr 1.05fr; } }
 
 .story { padding: 72px 0; background: var(--white); }
 .story-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
