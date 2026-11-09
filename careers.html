@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career — SAVCLICK</title>
+<meta name="description" content="Career at SAVCLICK, Asaba: send us your CV for future job openings in tech, smart home automation, digital services and training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tech.css">
+<link rel="stylesheet" href="careers.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+
+    <a href="index.html" class="logo" aria-label="SAVCLICK home">
+      <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="40" height="40">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <div class="main-nav-head">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="34" height="34">
+        </a>
+        <button class="nav-close" id="navClose" aria-label="Close menu">×</button>
+      </div>
+
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+
+        <li class="has-dropdown">
+          <button class="nav-link dropdown-toggle" id="deptToggle" aria-expanded="false" aria-controls="deptMenu">
+            Departments
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+
+          <div class="dropdown-menu" id="deptMenu">
+            <p class="dropdown-title">Choose a department</p>
+
+            <a class="dropdown-item" href="savclick-tech.html">
+              <img src="images/savclickTech.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Tech<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Logic board repair, Apple laptops, smart home automation</span>
+              </span>
+            </a>
+            <div class="dropdown-sub" role="group" aria-label="SAVCLICK Tech">
+              <a class="dropdown-subitem" href="savclick-tech.html">Macs Repair</a>
+              <a class="dropdown-subitem" href="smart-home.html">Smart Home/Hotel Automation</a>
+              <a class="dropdown-subitem" href="shop.html">Shop</a>
+            </div>
+
+            <a class="dropdown-item" href="savclick-digitex.html">
+              <img src="images/savclickdigitex.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Digitex<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Digital services and information hub</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item" href="savclick-academy.html">
+              <img src="images/savclickacademy.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Academy<span class="tag tag-open">Open</span></span>
+                <span class="dropdown-desc">Training programs and reservations</span>
+              </span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Travels">
+              <img src="images/savclicktravels.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Travels<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+
+            <a class="dropdown-item is-locked" href="#" data-construction="Properties">
+              <img src="images/savclickproperties.jpeg" alt="" class="dropdown-icon">
+              <span class="dropdown-text">
+                <span class="dropdown-name">SAVCLICK Properties<span class="tag tag-soon">Coming soon</span></span>
+                <span class="dropdown-desc">Opening after launch</span>
+              </span>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="careers.html" class="nav-link active">Career</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary btn-nav-mobile">Talk to us</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn-primary btn-nav">Talk to us</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim"></div>
+
+<main id="main">
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero careers-hero">
+    <div class="container">
+      <div class="page-hero-copy">
+        <p class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Career</p>
+        <p class="eyebrow">Career at SAVCLICK</p>
+        <h1>Build your tech career with us</h1>
+        <p class="hero-sub">We're a growing team in Asaba working across MacBook repair, smart home and hotel automation, digital services and training.</p>
+      </div>
+      <div class="careers-status" role="status">
+        <span class="careers-status-dot" aria-hidden="true"></span>
+        <div>
+          <strong>There's no available job right now.</strong>
+          <p>You can still send us your CV below. We'll keep it on file and contact you when a role that fits you opens up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFITS ============ -->
+  <section class="t-section alt" id="benefits">
+    <div class="container">
+      <div class="t-head">
+        <h2>Why work with us</h2>
+        <p>What you gain from building your career at SAVCLICK.</p>
+      </div>
+      <div class="t-grid cols-3">
+        <div class="t-card">
+          <h3>Real, hands-on tech work</h3>
+          <p>Work on real jobs for real customers: MacBook and logic board repair, smart home installations and digital projects.</p>
+        </div>
+        <div class="t-card">
+          <h3>Learn from professionals</h3>
+          <p>Work alongside experienced technicians, designers and marketers who do this every day and share what they know.</p>
+        </div>
+        <div class="t-card">
+          <h3>Training as you grow</h3>
+          <p>Build new skills through SAVCLICK Academy, from repair and automation to web, design and digital marketing.</p>
+        </div>
+        <div class="t-card">
+          <h3>Room to grow</h3>
+          <p>With several departments under one roof, there's space to take on more responsibility and try new areas.</p>
+        </div>
+        <div class="t-card">
+          <h3>A portfolio you can show</h3>
+          <p>The projects you work on become real experience and work you can point to for the rest of your career.</p>
+        </div>
+        <div class="t-card">
+          <h3>A supportive team</h3>
+          <p>A friendly, professional workplace where good work, reliability and clear communication are valued.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CV FORM ============
+       Sends through FormSubmit (formsubmit.co) to support@savclick.com, with the CV and
+       photograph as attachments. The first submission triggers a one-time activation email
+       to that address; click the link in it and later submissions arrive normally. -->
+  <section class="contact-main" id="apply">
+    <div class="container careers-form-wrap">
+      <div class="contact-form-card">
+        <h2>Send us your CV</h2>
+        <p class="section-sub">Fill in your details and upload your CV and a passport photograph. We'll be in touch when a suitable job is available.</p>
+
+        <form id="careerForm" action="https://formsubmit.co/support@savclick.com" method="POST" enctype="multipart/form-data" novalidate>
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New CV from the SAVCLICK Career page">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" id="careerNext" value="">
+          <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="field">
+            <label for="cName">Full name</label>
+            <input type="text" id="cName" name="Full name" placeholder="Your full name" autocomplete="name" required>
+            <span class="field-error">Please enter your full name.</span>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cEmail">Email address</label>
+              <input type="email" id="cEmail" name="email" placeholder="you@email.com" autocomplete="email" required>
+              <span class="field-error">Please enter a valid email address.</span>
+            </div>
+            <div class="field">
+              <label for="cPhone">Phone number</label>
+              <input type="tel" id="cPhone" name="Phone number" placeholder="e.g. 0803 000 0000" autocomplete="tel" required>
+              <span class="field-error">Please enter your phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cCv">Upload your CV</label>
+              <input type="file" id="cCv" name="CV" accept=".pdf,.doc,.docx" required>
+              <span class="field-hint">PDF or Word document, up to 5MB.</span>
+              <span class="field-error">Please upload your CV (PDF or Word, up to 5MB).</span>
+            </div>
+            <div class="field">
+              <label for="cPhoto">Upload a passport photograph</label>
+              <input type="file" id="cPhoto" name="Passport photograph" accept="image/jpeg,image/png" required>
+              <span class="field-hint">A normal passport photograph (not an ID card). JPG or PNG, up to 5MB.</span>
+              <span class="field-error">Please upload a passport photograph (JPG or PNG, up to 5MB).</span>
+            </div>
+          </div>
+
+          <div class="field field-check">
+            <label class="check">
+              <input type="checkbox" id="cConsent" name="Consent" value="Yes, I agree to be contacted by email" required>
+              <span>I agree that SAVCLICK can keep my details and contact me by email about job opportunities.</span>
+            </label>
+            <span class="field-error">Please tick this box to send your CV.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="careerSubmit">Send</button>
+        </form>
+
+        <div class="form-success" id="careerSuccess" hidden>
+          <span class="success-icon">✓</span>
+          <h3>Thank you, your CV has been sent</h3>
+          <p>We've received your details. We'll contact you by email or phone when a suitable job is available.</p>
+          <a href="careers.html#apply" class="btn btn-ghost">Send another CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SAVCLICK logo" class="logo-img" width="100" height="100">
+      </a>
+      <p>Excellently <b>empowering every choice</b> that you make</p>
+      <div class="footer-social">
+        <p class="footer-label">Follow Savclick Limited</p>
+        <ul>
+          <li><a href="https://www.facebook.com/share/18RCKYT39h/" target="_blank" rel="noopener" aria-label="SAVCLICK Limited on Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path fill="currentColor" stroke="none" d="M14 8.5h2.8V5H14c-2.6 0-4.5 2-4.5 4.6V12H7v3.5h2.5V22h3.6v-6.5h2.9l.6-3.5h-3.5V9.8c0-.8.4-1.3 1.2-1.3Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/_savclick/" target="_blank" rel="noopener" aria-label="SAVCLICK Limited on Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/savclick/" target="_blank" rel="noopener" aria-label="SAVCLICK Limited on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4.5 9.5h3.3V20H4.5zM6.2 4a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8ZM10 9.5h3.2v1.5h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.2V20h-3.3v-4.9c0-1.2 0-2.7-1.6-2.7-1.7 0-1.9 1.3-1.9 2.6v5H10Z"/></svg></a></li>
+          <li><a href="https://x.com/savclick" target="_blank" rel="noopener" aria-label="SAVCLICK Limited on X" title="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path fill="currentColor" stroke="none" d="M17.8 3.5h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4-5.6 6.4H2.2l7.3-8.3L1.9 3.5h6.4l4.4 5.9Zm-1.1 16.2h1.7L7.4 5.2H5.6Z"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@savclickchannel2860" target="_blank" rel="noopener" aria-label="SAVCLICK Limited on YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path fill="currentColor" stroke="none" d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.6 2.6 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3Z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      <li><a href="careers.html">Career</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Departments</h4>
+      <ul>
+        <li><a href="savclick-tech.html">SAVCLICK Tech</a></li>
+        <li><a href="savclick-digitex.html">SAVCLICK Digitex</a></li>
+        <li><a href="savclick-academy.html">SAVCLICK Academy</a></li>
+        <li><a href="#" data-construction="Travels">SAVCLICK Travels</a></li>
+        <li><a href="#" data-construction="Properties">SAVCLICK Properties</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <ul class="footer-contact">
+        <li>
+          <span class="footer-label">Call / WhatsApp</span>
+          <a href="tel:+2348139552920">+234 813 955 2920</a>
+          <a href="https://wa.me/2348139552920" target="_blank" rel="noopener" class="footer-sub">Chat on WhatsApp</a>
+        </li>
+        <li>
+          <span class="footer-label">Email</span>
+          <a href="mailto:support@savclick.com">support@savclick.com</a>
+        </li>
+        <li>
+          <span class="footer-label">Address</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Benemma+Complex+Okpanam+Road+Asaba+Nigeria" target="_blank" rel="noopener"><address>Benemma Complex,<br>off Okpanam Road,<br>Asaba, Nigeria</address></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SAVCLICK Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ CONSTRUCTION MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <span class="modal-icon">🚧</span>
+    <h3 id="modalTitle">SAVCLICK <span id="modalDept"></span> is under construction</h3>
+    <p>This department hasn't opened yet. We're building it as our next project after launch — check back soon.</p>
+    <button class="btn btn-primary" id="modalOk">Got it</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="careers.js"></script>
+</body>
+</html>
