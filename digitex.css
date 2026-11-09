@@ -80,6 +80,10 @@
   object-fit: cover;
 }
 
+/* Videos: show the whole frame (no cropping) on black */
+.pf-thumb.pf-video { background: #000; }
+.pf-thumb.pf-video video { object-fit: contain; }
+
 .pf-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .pf-cat {
   align-self: flex-start;
