@@ -136,12 +136,18 @@ function initDirectoryReveal() {
   observer.observe(board);
 }
 
-/* ---------- Contact form: validation + demo submit ---------- */
+/* ---------- Contact form: validation + send ----------
+   Sends through FormSubmit (formsubmit.co) to CONTACT_EMAIL. The first message
+   triggers a one-time activation email to that address; confirm it once. */
 function initContactForm() {
   const form = document.getElementById("contactForm");
   const successPanel = document.getElementById("formSuccess");
   const resetBtn = document.getElementById("formReset");
   if (!form) return;
+  const CONTACT_EMAIL = "support@savclick.com";
+  const sendError = document.getElementById("formSendError");
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn ? submitBtn.textContent : "";
 
   const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
@@ -183,9 +189,42 @@ function initContactForm() {
       return;
     }
 
-    // No backend connected yet — this is a front-end only demo.
-    form.hidden = true;
-    if (successPanel) successPanel.hidden = false;
+    // Spam trap: real visitors never fill the hidden field
+    const honey = form.querySelector('input[name="_honey"]');
+    if (honey && honey.value) return;
+
+    const phone = document.getElementById("phone");
+    const payload = {
+      Name: fullName.value.trim(),
+      email: email.value.trim(),
+      Phone: phone ? phone.value.trim() || "-" : "-",
+      Department: department.options[department.selectedIndex].text,
+      Message: message.value.trim(),
+      _subject: "New message from the SAVCLICK website (" + department.value + ")",
+      _template: "table",
+      _captcha: "false",
+    };
+
+    if (sendError) sendError.hidden = true;
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+
+    fetch("https://formsubmit.co/ajax/" + CONTACT_EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json().then((data) => ({ ok: res.ok, data })))
+      .then(({ ok, data }) => {
+        if (!ok || String(data.success) !== "true") throw new Error(data.message || "Send failed");
+        form.hidden = true;
+        if (successPanel) successPanel.hidden = false;
+      })
+      .catch(() => {
+        if (sendError) sendError.hidden = false;
+      })
+      .finally(() => {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+      });
   });
 
   if (resetBtn) {
