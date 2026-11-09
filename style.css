@@ -539,6 +539,10 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .field.has-error .field-error { display: block; }
 
 .btn-submit { width: 100%; justify-content: center; margin-top: 6px; }
+.btn-submit[disabled] { opacity: 0.7; cursor: progress; }
+.form-send-error { margin: 12px 0 0; padding: 12px 14px; border-radius: var(--radius-sm); background: rgba(220, 38, 38, 0.08); color: #b91c1c; font-size: 0.88rem; }
+.form-send-error a { text-decoration: underline; }
+.hp-field { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 .form-success { text-align: center; padding: 20px 4px 4px; }
 .success-icon {
